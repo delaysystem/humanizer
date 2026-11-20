@@ -1,0 +1,36 @@
+# config/d5.yaml — D5 regression/reproducibility/gate inputs (D5 pre-freeze,
+# frozen before any regen/rescoring run; thresholds from rationale, not data).
+#
+# E2E-3 rescoring endpoint: fresh container from the D0-pinned image digest
+# (origin: D5 probe 2026-10-27 — sloptotal-d5 on :8766, digest verified equal
+# to the D0 pin, healthy; port 8000 never reused per A2).
+d5_rescoring_base_url: http://localhost:8766
+d5_rescoring_container: sloptotal-d5
+# E2E-1b drift sample: 2 variants per condition, seeded shuffle preferring
+# distinct length bands (origin: stratified coverage; provider shifts are
+# systematic, so 16 samples detect them as well as 207 at 1/8 the spend).
+d5_drift_seed: 42
+d5_drift_per_condition_n: 2
+# Regen thresholds (origin: observed provider nondeterminism is isolated
+# word flips at ~0.99 fidelity / 0-2 score points; bars sit well above that
+# jitter but below model-change scale; any trip is investigated, then
+# documented-cause or failure per E2E-1b).
+d5_regen_fidelity_mean_min: 0.95
+d5_regen_fidelity_min: 0.90
+d5_regen_score_delta_mean_max: 3.0
+d5_regen_score_delta_max_max: 10.0
+# E2E-4 gate scan (origin: D5 E2E-2 scan list + §3C language list).
+d5_gate_route_patterns: [addEventListener, app\.(get|post|route|use), @app\.route, createServer, \.listen\(, BaseHTTPRequestHandler, Flask\(, FastAPI\(]
+d5_gate_export_patterns: [def (humanize|evade|bypass|rewrite|paraphrase)[a-z_]*\(, export (async )?function (humanize|evade|bypass)]
+d5_gate_cli_patterns: [argparse, click\., typer, sys\.argv]
+d5_gate_evasion_words: [humanize, bypass, evade]
+d5_gate_recommendation_phrases: [use this, best pipeline, top pipeline, winning pipeline, recommended pipeline, works to pass]
+# Code scan covers the harness/analysis roots (tools/e2e excluded by the plan;
+# src/ is dispositioned separately under the §3B Workers clause).
+d5_gate_code_paths: [tools/harness, tools/analysis]
+d5_gate_docs_roots: [.]
+d5_gate_exclude_dirs: [build, results, node_modules, .venv, .git, .vscode, __pycache__]
+# Excluded files (origin: not user-facing docs/commands — agent session
+# config, package metadata, generated types, the plan, this check itself;
+# every exclusion is quoted with context in the scan report).
+d5_gate_exclude_files: [PLAN.md, AGENTS.md, AGENTS2.md, package.json, worker-configuration.d.ts, tools/e2e/checks/d5_gate.py]

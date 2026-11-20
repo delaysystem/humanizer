@@ -1,0 +1,333 @@
+{
+  "sample_id": "V-d3a-i5-A-science-explainer-L-1",
+  "original_id": "A-science-explainer-L-1",
+  "ground_truth_label": "ai",
+  "condition_id": "d3a-i5",
+  "transform_params": {
+    "pipeline": "d3a-i5",
+    "steps": [
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-d3a-i5-A-science-explainer-L-1.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.041,
+      "verdict": "clean",
+      "details": "AI probability: 4.1% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.979,
+      "verdict": "slop",
+      "details": "AI probability: 97.9% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.159 (observer/performer), PP performer: 40.2, PP observer: 72.3"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.112 (higher = more AI-like, n=364 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.258,
+      "verdict": "clean",
+      "details": "Perplexity: 40.2 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.119,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 40.2 (score 0.26), DistilGPT-2 PP: 72.3 (score 0.00), agreement: 0.74"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.65,
+      "verdict": "suspicious",
+      "details": "AI probability: 65.0% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.966,
+      "verdict": "slop",
+      "details": "AI probability: 96.6% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.997,
+      "verdict": "slop",
+      "details": "AI probability: 99.7% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.998,
+      "verdict": "slop",
+      "details": "AI probability: 99.8% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Top-1: 30%, Top-5: 54%, Top-10: 62%, Top-100: 87% of 364 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.145,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.06 (lower = more AI-like, n=364 tokens)"
+    },
+    "DivEye": {
+      "score": 0.047,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.800, skew: 0.75, kurtosis: 0.00 (mean=3.7, std=3.0, n=364)"
+    },
+    "Burstiness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.840 (mean=52.5, stdev=44.1, n=19 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.631,
+      "verdict": "suspicious",
+      "details": "Found 2 AI markers (density: 9.5/1k words): \"plays a crucial role\", \"crucial\""
+    },
+    "Structural Analysis": {
+      "score": 0.043,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.28 (mean 17 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 12.87 (unique/\u221atotal), Hapax ratio: 0.81 (187/231 words), Yule's K: 44.9"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.176,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=18.7, stdev=9.7, CV=0.517 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine": 0.9717,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 0,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 16,
+      "entities_recall": 0.875,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 12.57,
+        "variant": 16.27
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1+readability+langrule",
+    "language": {
+      "intended_final": "en",
+      "kannada_fraction": 0.0,
+      "limit": 0.05,
+      "mismatch": false
+    }
+  },
+  "store_record_id": "d3a-V-d3a-i5-A-science-explainer-L-1",
+  "raw_report_id": "fe13efdad45b",
+  "overall_verbatim": {
+    "overall_score": 77.2,
+    "overall_verdict": "Likely AI-generated",
+    "engines_flagged": 7,
+    "engines_total": 23
+  },
+  "apply_source": {
+    "entry": "FIX-D3A-003",
+    "condition": "d3a-i5",
+    "endpoint": "http://localhost:8769"
+  }
+}

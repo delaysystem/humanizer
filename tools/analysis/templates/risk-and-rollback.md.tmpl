@@ -1,0 +1,12 @@
+# Risk and rollback {{FIX_ID}}
+
+- Expected false-positive impact: lowering T to catch the {{FLIPS}} flips
+  raises human-text scores toward AI; the tradeoff curve bounds this
+  (candidates with FPR above {{FPR_BOUND}} are outside the bound).
+- Curve fact (not a recommendation): {{BEST_FACT}}.
+- Interaction with other entries: threshold moves compose nonlinearly with
+  retraining; verify entries one at a time.
+- Small-sample risk: N={{N}}; the 95% Wilson CI [{{CI_LO}}, {{CI_HI}}] is
+  wide and provider re-calls are nondeterministic (see D3A verdict).
+- Rollback trigger: any verification failure, or human-FPR above
+  {{FPR_BOUND}}, reverts the deployment to the D0-pinned image.

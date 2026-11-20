@@ -1,0 +1,178 @@
+{
+  "id": "6630556e3165",
+  "source_type": "text",
+  "source": "Labor negotiations at one of the country's busiest container ports have reached a critical point, wi",
+  "text_excerpt": "Labor negotiations at one of the country's busiest container ports have reached a critical point, with a union contract set to expire in just a few days. The port authority's plan to expand automation to additional terminals is at the center of the dispute. The administration argues that automated cranes will dramatically improve efficiency, citing significantly faster ship turnaround times at an existing automated berth. However, union leaders counter that automation has consistently eroded membership. They question whether productivity statistics take into account system downtime and the full cost of maintenance. This issue isn't limited to water resources; economists warn that even a minor work stoppage can disrupt supply chains.",
+  "word_count": 110,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.987,
+      "verdict": "slop",
+      "details": "AI probability: 98.7% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.977,
+      "verdict": "slop",
+      "details": "AI probability: 97.7% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.118 (observer/performer), PP performer: 33.5, PP observer: 50.7",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.052 (higher = more AI-like, n=124 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.435,
+      "verdict": "suspicious",
+      "details": "Perplexity: 33.5 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.405,
+      "verdict": "suspicious",
+      "details": "GPT-2 Medium PP: 33.5 (score 0.43), DistilGPT-2 PP: 50.7 (score 0.39), agreement: 0.95",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.92,
+      "verdict": "slop",
+      "details": "AI probability: 92.0% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.881,
+      "verdict": "slop",
+      "details": "AI probability: 88.1% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.985,
+      "verdict": "slop",
+      "details": "AI probability: 98.5% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.032,
+      "verdict": "clean",
+      "details": "Top-1: 31%, Top-5: 54%, Top-10: 63%, Top-100: 87% of 124 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.276,
+      "verdict": "clean",
+      "details": "Mean log-rank: 1.92 (lower = more AI-like, n=124 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.062,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.777, skew: 0.51, kurtosis: -0.65 (mean=3.5, std=2.7, n=124)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.435,
+      "verdict": "suspicious",
+      "details": "Sentence perplexity CV: 0.517 (mean=40.3, stdev=20.8, n=6 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.039,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.31 (mean 18 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 8.65 (unique/\u221atotal), Hapax ratio: 0.89 (82/92 words), Yule's K: 62.7",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.635,
+      "verdict": "suspicious",
+      "details": "Flesch Reading Ease: mean=28.4, stdev=27.1, CV=0.953 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 74.4,
+  "overall_verdict": "Likely AI-generated",
+  "engines_flagged": 11,
+  "engines_total": 23,
+  "input_chars": 742,
+  "created_at": "2026-10-27T18:30:22",
+  "language": "en",
+  "language_support": "supported"
+}

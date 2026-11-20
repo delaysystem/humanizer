@@ -1,0 +1,6 @@
+{
+  "pipeline": "d3a-combo-trunc-rt",
+  "degraded_variant_ids": [
+    "V-d3a-combo-trunc-rt-A-tech-news-L-3"
+  ]
+}

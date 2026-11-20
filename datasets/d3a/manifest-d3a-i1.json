@@ -1,0 +1,35 @@
+{
+  "dataset_version": "d3a-i1-v1",
+  "condition": "d3a-i1",
+  "params": [
+    {
+      "step": "bodhan-en-kn@v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en@v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "sample_count": 27,
+  "variant_count": 27,
+  "degraded_count": 0,
+  "fidelity": {
+    "median_cosine": 0.9797,
+    "min_cosine": 0.8239,
+    "gate_version": "3layer-v1+readability+langrule"
+  },
+  "intensities": [
+    "1",
+    "3",
+    "5",
+    "10"
+  ],
+  "producing_run_id": "20261027-030247-d3a-798393"
+}

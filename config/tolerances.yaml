@@ -1,0 +1,24 @@
+# config/tolerances.yaml — named tolerance table (P2 tolerance registry).
+# One row per tolerance: name, what it bounds, value, source, owning milestone.
+# A check citing 'tolerance' without a row fails review.
+
+# Bounds: |reported percentage - recomputed percentage| for §3C/D4/D6 tables.
+# Value 0.05 = half the 0.1 reporting unit for 1-decimal percentages.
+# Source: D0 decision, recorded in D0 verdict. Owner: D0 (validated by D4 recomputation check).
+percentage_recompute_rounding: 0.05
+
+# Bounds: per-text, per-detector score spread across N re-runs.
+# Measured 0.0: 4 texts x 5 repeats all cache-identical, and identical after a
+# container restart (volume-backed content-keyed reports). D5 reuse is valid
+# only while that server behavior holds; drift is a finding, not absorbed.
+# Evidence: build/evidence/D2/probe1-determinism.json + probe1-restart.json.
+score_rerun_tolerance: 0.0
+# Repeat count for the D2 determinism probe (origin: D2 decision — enough to
+# observe flakiness/cache behavior; cheap because Sloptotal dedupes repeats).
+determinism_repeat_n: 5
+
+# Bounds: |reported fraction - recomputed fraction| for D4 analysis tables
+# (4dp fractions; exact recomputation on frozen stores, absorbs float repr).
+# Source: D4 pre-freeze. Owner: D4 (cited by E2E-1 alongside
+# percentage_recompute_rounding, which E2E-1 validates on the 1dp columns).
+d4_rate_tolerance: 1e-09

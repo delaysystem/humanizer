@@ -1,0 +1,32 @@
+[
+  {
+    "sample_id": "A-product-review-S-2",
+    "pipeline": "d3a-i5",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  },
+  {
+    "sample_id": "A-product-review-S-3",
+    "pipeline": "d3a-i5",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  },
+  {
+    "sample_id": "A-science-explainer-L-1",
+    "pipeline": "d3a-i5",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  },
+  {
+    "sample_id": "A-tech-news-S-2",
+    "pipeline": "d3a-i5",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  },
+  {
+    "sample_id": "A-tech-news-S-3",
+    "pipeline": "d3a-i5",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  }
+]

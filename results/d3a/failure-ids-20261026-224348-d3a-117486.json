@@ -1,0 +1,830 @@
+{
+  "FAIL-TM-d3a-combo-rt-trunc-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-RM-d3a-combo-rt-trunc-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-combo-rt-trunc-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-combo-rt-trunc-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-combo-rt-trunc-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-combo-rt-trunc-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-combo-rt-trunc-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-combo-rt-trunc-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-combo-rt-trunc-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-OA-d3a-combo-rt-trunc-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-combo-rt-trunc-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-DL-d3a-combo-rt-trunc-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-combo-rt-trunc-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-combo-rt-trunc-001": {
+    "detector": "GLTR",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-combo-rt-trunc-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-combo-rt-trunc-001": {
+    "detector": "DivEye",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-combo-rt-trunc-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-LM-d3a-combo-rt-trunc-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-combo-rt-trunc-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-combo-rt-trunc-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-combo-rt-trunc-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-combo-rt-trunc-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-SH-d3a-combo-rt-trunc-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-combo-rt-trunc",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-TM-d3a-combo-trunc-rt-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-RM-d3a-combo-trunc-rt-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-combo-trunc-rt-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-combo-trunc-rt-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-combo-trunc-rt-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-combo-trunc-rt-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-combo-trunc-rt-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-combo-trunc-rt-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-combo-trunc-rt-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-OA-d3a-combo-trunc-rt-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-combo-trunc-rt-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-DL-d3a-combo-trunc-rt-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-combo-trunc-rt-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-combo-trunc-rt-001": {
+    "detector": "GLTR",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-combo-trunc-rt-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-combo-trunc-rt-001": {
+    "detector": "DivEye",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-combo-trunc-rt-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 1
+  },
+  "FAIL-LM-d3a-combo-trunc-rt-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-combo-trunc-rt-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-combo-trunc-rt-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-combo-trunc-rt-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-combo-trunc-rt-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 1
+  },
+  "FAIL-SH-d3a-combo-trunc-rt-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-combo-trunc-rt",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-TM-d3a-i1-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-RM-d3a-i1-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-i1-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-i1-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-i1-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-i1-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-i1-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-i1-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-i1-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-OA-d3a-i1-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-i1-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-DL-d3a-i1-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-i1-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-i1-001": {
+    "detector": "GLTR",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-i1-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-i1-001": {
+    "detector": "DivEye",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-i1-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-LM-d3a-i1-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-i1-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-i1-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-i1-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-i1-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 1
+  },
+  "FAIL-SH-d3a-i1-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-i1",
+    "fidelity_passing_n": 27,
+    "flips": 0
+  },
+  "FAIL-TM-d3a-i10-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 1
+  },
+  "FAIL-RM-d3a-i10-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-i10-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-i10-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-i10-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-i10-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-i10-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-i10-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-i10-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-OA-d3a-i10-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-i10-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-DL-d3a-i10-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-i10-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-i10-001": {
+    "detector": "GLTR",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-i10-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-i10-001": {
+    "detector": "DivEye",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-i10-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-LM-d3a-i10-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-i10-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-i10-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-i10-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-i10-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-SH-d3a-i10-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-i10",
+    "fidelity_passing_n": 9,
+    "flips": 0
+  },
+  "FAIL-TM-d3a-i3-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-RM-d3a-i3-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-i3-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-i3-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-i3-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-i3-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-i3-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-i3-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-i3-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 1
+  },
+  "FAIL-OA-d3a-i3-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-i3-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 1
+  },
+  "FAIL-DL-d3a-i3-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-i3-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-i3-001": {
+    "detector": "GLTR",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-i3-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-i3-001": {
+    "detector": "DivEye",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-i3-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 1
+  },
+  "FAIL-LM-d3a-i3-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-i3-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-i3-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-i3-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-i3-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 2
+  },
+  "FAIL-SH-d3a-i3-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-i3",
+    "fidelity_passing_n": 26,
+    "flips": 0
+  },
+  "FAIL-TM-d3a-i5-001": {
+    "detector": "TMR Detector",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 1
+  },
+  "FAIL-RM-d3a-i5-001": {
+    "detector": "ReMoDetect",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-BN-d3a-i5-001": {
+    "detector": "Binoculars",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-FD-d3a-i5-001": {
+    "detector": "Fast-DetectGPT",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-PP-d3a-i5-001": {
+    "detector": "Perplexity",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-XP-d3a-i5-001": {
+    "detector": "Cross-Perplexity",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-FS-d3a-i5-001": {
+    "detector": "Fakespot",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-E5-d3a-i5-001": {
+    "detector": "E5-Small",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-BT-d3a-i5-001": {
+    "detector": "BERT-tiny RAID",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 1
+  },
+  "FAIL-OA-d3a-i5-001": {
+    "detector": "OpenAI Detector",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-CG-d3a-i5-001": {
+    "detector": "ChatGPT Detector",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-DL-d3a-i5-001": {
+    "detector": "Desklib DeBERTa",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-SN-d3a-i5-001": {
+    "detector": "SuperAnnotate",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-GL-d3a-i5-001": {
+    "detector": "GLTR",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-LR-d3a-i5-001": {
+    "detector": "Log-Rank",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-DE-d3a-i5-001": {
+    "detector": "DivEye",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-BU-d3a-i5-001": {
+    "detector": "Burstiness",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 1
+  },
+  "FAIL-LM-d3a-i5-001": {
+    "detector": "Linguistic Markers",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-SA-d3a-i5-001": {
+    "detector": "Structural Analysis",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-VR-d3a-i5-001": {
+    "detector": "Vocabulary Richness",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-FP-d3a-i5-001": {
+    "detector": "Formulaic Patterns",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  },
+  "FAIL-RU-d3a-i5-001": {
+    "detector": "Readability Uniformity",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 2
+  },
+  "FAIL-SH-d3a-i5-001": {
+    "detector": "Sentiment & Hedging",
+    "condition": "d3a-i5",
+    "fidelity_passing_n": 22,
+    "flips": 0
+  }
+}

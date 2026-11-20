@@ -1,0 +1,11 @@
+{
+  "variant_id": "V-d3a-i1-A-science-explainer-L-1",
+  "rounds": [
+    {
+      "round": 1,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i1-A-science-explainer-L-1/round1.txt"
+    }
+  ]
+}

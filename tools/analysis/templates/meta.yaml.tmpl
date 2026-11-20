@@ -1,0 +1,12 @@
+# {{FIX_ID}} meta (fix-schema v1)
+fix_schema_version: 1
+target_deployment: {{D0_PIN}} (D0 pin; re-pin at apply time)
+target_detectors: {{DETECTOR_ID}}
+condition_ids: [{{CONDITION}}]
+failure_ids: [{{FAILURE_ID}}]
+status: PROPOSED_NOT_APPLIED
+status_lifecycle: PROPOSED_NOT_APPLIED -> REVIEWED / REJECTED (later states out of scope: this plan never edits the deployment)
+supersedes: none
+superseded_by: none
+owner: TBD-apply-phase
+approver: TBD-owner

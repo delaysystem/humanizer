@@ -1,0 +1,69 @@
+# config/d6.yaml — D6 final-report inputs (D6 pre-freeze, frozen before any
+# table computation; bucket maps enumerate probe-observed label sets, no rate
+# was moved after seeing results). Loader: flat keys; lists split on commas,
+# so no list item contains a comma. Grounds below use ' || ' separators and
+# contain no '#'; prose lines contain no '#' (loader comment rule).
+
+# --- overall verdict buckets: plain-meaning bucketing of the 5 provider
+# verbatim overall_verdict strings enumerated by probe (build/evidence/D6/
+# d6-probes.json) before table generation. 'Low risk' is the provider's
+# low-AI-risk label, hence human-side by plain meaning; the raw-value counts
+# are published in the report so a reader can re-bucket. The tables check
+# fails on any observed value missing from these three lists.
+d6_overall_bucket_ai: [Likely AI-generated, Slop detected]
+d6_overall_bucket_human: [Clean — likely human-written, Low risk]
+d6_overall_bucket_uncertain: [Suspicious]
+# --- per-detector uncertain basis, recorded once (origin: D3A flip freeze +
+# D0 inventory). Per-detector human/AI sets reuse the frozen flip maps in
+# config/analysis.yaml; uncertain/other is flip_verdict_map_neither.
+d6_uncertain_basis: verdict=suspicious intermediate band (D3A flip freeze: neither decision); no explicit uncertain label exposed (D0 inventory uncertain_basis none-exposed)
+
+# --- report numerics (origin: D4 precedent — 1dp percentages feed the D0
+# 0.05 rounding row; 4dp fractions feed the D4 1e-9 row).
+d6_pct_decimals: 1
+d6_frac_decimals: 4
+# Fidelity spread definition (origin: D6 decision — range is the simplest
+# distribution width, exact from data; median/min/max reported alongside).
+d6_spread_definition: range-max-minus-min
+
+# --- triage list order (origin: D6 decision — the plan's own example key;
+# tie-breaks stated so the order is deterministic).
+d6_triage_sort_key: fidelity-passing-flip-count-desc
+d6_triage_tiebreak: pipeline-config-order-then-detector-inventory-order
+
+# --- blocked-items catalog (D6 E2E-1b). Grounds are FILE || substring pairs
+# (filenames under build/); every substring must occur in the named verdict.
+# The check additionally requires every EXTERNAL-BLOCKED / NOT-RUN token line
+# in every verdict below to be covered by at least one entry.
+d6_blocked_verdicts: [D0-VERDICT.md, D1-VERDICT.md, D2-VERDICT.md, D3-VERDICT.md, D3A-VERDICT.md, D4-VERDICT.md, D5-VERDICT.md]
+d6_blocked_ids: [B-001, B-002, B-003, B-004, B-005, B-006]
+d6_b001_grounds: D0-VERDICT.md || ensemble recomputation is NOT-RUN || D2-VERDICT.md || ensemble recomputation correctly NOT-RUN || D5-VERDICT.md || ensemble NOT-RUN
+d6_b001_reason: Sloptotal computes the overall decision provider-side and exposes no aggregation formula (D0 probe recorded the formula UNKNOWN).
+d6_b001_effect: No overall rate is recomputed or estimated; overall rows report verbatim-bucketed shares only. No conclusion depends on an ensemble formula.
+d6_b002_grounds: D2-VERDICT.md || all EXTERNAL-BLOCKED, zero score records || D2-VERDICT.md || EXTERNAL-BLOCKED on transport failure, never a score
+d6_b002_reason: Simulated transport failure against a loopback discard port, proving failures block loudly (D2 E2E-4 design).
+d6_b002_effect: None on conclusions: the check passed by blocking with zero score records. This entry exists so the token scan has no uncovered occurrence.
+d6_b003_grounds: D2-VERDICT.md || Layer 3 (human spot-check) execution is EXTERNAL-BLOCKED || D5-VERDICT.md || Layer-3 EXTERNAL-BLOCKED || D3A-VERDICT.md || Layer-3 human spot-check NOT executed || D4-VERDICT.md || Layer-3 spot-check still unsampled (inherited D3A limitation)
+d6_b003_reason: Blinded ratings need two external raters and the rater must not be the pipeline implementer, so no in-session rater qualifies.
+d6_b003_effect: Fidelity rests on the automated layers only; spot-check fields are null throughout. Every fidelity-passing claim is an automated-gate claim, and detector-failure conclusions are conditional on automated fidelity (stated wherever they appear).
+d6_b004_grounds: D5-VERDICT.md || Workers scaffold with I-1/I-2/I-3 NOT-RUN || D5-VERDICT.md || I-1/I-2/I-3 NOT-RUN with reason || D5-VERDICT.md || no deployment evidence anywhere || D5-VERDICT.md || pre-existing user scaffolding
+d6_b004_reason: The section 3B REST endpoints were never deployed; src/index.ts is undeployed queue-template scaffolding with no deployment evidence anywhere.
+d6_b004_effect: No conclusion about REST behavior is made or implied; the report claims nothing the I-1/I-2/I-3 checks would have tested.
+d6_b005_grounds: D5-VERDICT.md || not regression-tested || D5-VERDICT.md || lands complete in D6
+d6_b005_reason: At D5 time no milestone or suite existed for section 3B REST or section 3C tables, so D5 explicitly excluded them from regression scope.
+d6_b005_effect: Section 3C is resolved in D6: the full-schema tables are produced here and every cell is recomputed by the suite. Section 3B REST stays uncovered (see B-004); nothing in this report cites untested REST behavior.
+d6_b006_grounds: D1-VERDICT.md || Both arms were written by the same model under different briefs
+d6_b006_reason: The dataset arms were written by one model under two briefs, so human controls are craft-briefed prose, not wild human writing.
+d6_b006_effect: Human-side rates describe detector behavior on craft-briefed prose only. Every human-side claim in this report carries this caveat; no wild-writing generalization is made.
+
+# --- release gate (D6 E2E-4). The checklist has exactly these four items;
+# no-detector-edits re-executes d4_noedit.py and no-humanizer-artifact
+# re-executes d5_gate.py as subprocesses; the other two are D6 checks.
+d6_release_items: [no-secrets-in-diff, no-debug-endpoints, no-detector-edits, no-humanizer-artifact]
+# Frozen D5 implementer run whose gate scan is cited in the report
+# (origin: D5 verdict P6 triple; same precedent as d4_d3a_tables_run_id).
+d6_d5_impl_run_id: 20261027-041144-d5-992575
+d6_gate_secret_roots: [.]
+d6_gate_secret_exclude_dirs: [build, results, node_modules, .venv, .git, .vscode, __pycache__, .models]
+d6_gate_debug_roots: [tools/harness, tools/analysis, src]
+d6_gate_debug_patterns: [/debug/, DEBUG-ONLY-ENDPOINT, bypass_auth, disable_auth, no_auth, test_backdoor]

@@ -1,0 +1,8 @@
+[
+  {
+    "sample_id": "A-product-review-S-1",
+    "pipeline": "probe-bodhan-fault",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "HTTP 400: b'{\"error\":{\"message\":\"\\'bhb\\' (Bhili) is not supported: the model was not trained on it. It appears in the speech API\\'s language list, which is why it reaches here; it is refused rather than mapped to a '"
+  }
+]

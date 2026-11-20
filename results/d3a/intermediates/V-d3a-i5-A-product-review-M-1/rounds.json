@@ -1,0 +1,35 @@
+{
+  "variant_id": "V-d3a-i5-A-product-review-M-1",
+  "rounds": [
+    {
+      "round": 1,
+      "cosine": 0.9873,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-product-review-M-1/round1.txt"
+    },
+    {
+      "round": 2,
+      "cosine": 0.9851,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-product-review-M-1/round2.txt"
+    },
+    {
+      "round": 3,
+      "cosine": 0.9829,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-product-review-M-1/round3.txt"
+    },
+    {
+      "round": 4,
+      "cosine": 0.9827,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-product-review-M-1/round4.txt"
+    },
+    {
+      "round": 5,
+      "cosine": 0.9824,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-product-review-M-1/round5.txt"
+    }
+  ]
+}

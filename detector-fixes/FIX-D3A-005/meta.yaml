@@ -1,0 +1,11 @@
+# FIX-D3A-005 meta (fix-schema v1)
+fix_schema_version: 1
+target_deployment: ghcr.io/pablocaeg/sloptotal@sha256:68dd12645e9995b3ad6505fbe974d52cd3c58e7198c060058e4d7c622c27e61c (D0 pin; re-pin at apply time)
+target_detectors: all-23-inventory
+status: VERIFIED
+status_lifecycle: PROPOSED_NOT_APPLIED -> APPLIED -> VERIFIED (A3 authorizes isolated deployments; approver TBD-owner)
+supersedes: none
+superseded_by: none
+owner: apply-phase
+approver: TBD-owner
+apply_result: apply-result.md

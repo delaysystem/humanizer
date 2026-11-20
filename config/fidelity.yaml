@@ -1,0 +1,34 @@
+# config/fidelity.yaml — fidelity gate configuration (§1.1 row group). All [probe — D2].
+
+# Automated threshold: document-embedding cosine, variant-vs-original.
+# Calibrated in D2 by the frozen rule on pre-registered anchors (high 0.9357,
+# low 0.7089, gap 0.2268): floor_to_0.05(midpoint) = 0.80.
+# Evidence: build/evidence/D2/fidelity-anchors.json + probe2-anchor-scores.json.
+fidelity_threshold: 0.8
+fidelity_threshold_metric: doc-embedding-cosine
+# Scorer model name + version (origin: D2 Probe 2 — established implementation,
+# CPU torch; audit build/evidence/D2/probe2-pip-audit.txt; env .venv per requirements-fidelity.txt).
+fidelity_scorer_model: sentence-transformers-6.2.0/all-MiniLM-L6-v2
+fidelity_model_cache_dir: .models
+# Human spot-check sampling (origin: D2 decision — protocol frozen in
+# build/evidence/D2/spotcheck-protocol.md; execution EXTERNAL-BLOCKED pending
+# two external raters, since the implementer cannot rate their own pipeline).
+spotcheck_sampling_rate: 0.2
+spotcheck_strata: condition-x-fidelity-band
+spotcheck_seed: 42
+# Pass rule: mean adequacy >= 4 and mean fluency >= 4 (origin: D2 decision —
+# 5-point Likert per §2.3; 4 = minor issues only; disagreements adjudicated).
+spotcheck_pass_rule: mean-adequacy-gte-4-and-mean-fluency-gte-4
+spotcheck_rubric_version: v1-frozen-D2
+# Final-language rule, §2.3 (origin: D3A decision — script-fraction proxy for
+# language ID; no langdetect dependency. Intended final language is English;
+# Kannada-script fraction above the limit marks the variant degraded
+# regardless of Layer 1. Applied to D3A variants at generation; D4 applies the
+# same rule at analysis time for D3 variants (no D3 evidence rewritten).
+lang_intended_final: en
+lang_kannada_fraction_limit: 0.05
+# Gate versions by dataset (origin: D3A decision — D3 keeps the v1 pass rule;
+# the 8765 regression re-gate also records readability additively, values
+# unchanged). D3A adds the language rule on top.
+gate_version_d3: 3layer-v1
+gate_version_d3a: 3layer-v1+readability+langrule

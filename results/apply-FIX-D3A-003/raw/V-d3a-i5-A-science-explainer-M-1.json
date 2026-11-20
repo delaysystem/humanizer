@@ -1,0 +1,178 @@
+{
+  "id": "7867167df599",
+  "source_type": "text",
+  "source": "Scientists are conducting open-field trials of wheat modified with CRISPR gene-editing technology, m",
+  "text_excerpt": "Scientists are conducting open-field trials of wheat modified with CRISPR gene-editing technology, marking a significant milestone for agricultural biotechnology. Unlike traditional genetic modifications that introduce foreign DNA, these changes involve precise deletions within the plant's own genome. This distinction has important regulatory implications, as many authorities classify such changes alongside conventional breeding methods. Initial results suggest that edited wheat significantly better resists fungal disease than conventional varieties, without affecting yield. Researchers emphasize that several growing seasons will be required to confirm these findings. This technology raises broader questions about the density of agricultural patents and the management of gene flow to wild relatives. Proponents argue that rapid crop improvement is essential for food security in a changing climate. Regulatory frameworks continue to evolve as the technology matures. Since edited foods still need to gain shelf space and public trust, consumer acceptance may prove just as crucial as regulation. Labeling discussions are ongoing, with industry groups supporting minimal disclosure and advocacy organizations demanding transparency. Early market introductions in several countries suggest that clear communication about the nature of the changes can improve acceptance. Researchers are already applying similar techniques to rice, corn, and legumes.",
+  "word_count": 193,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.344,
+      "verdict": "clean",
+      "details": "AI probability: 34.4% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.983,
+      "verdict": "slop",
+      "details": "AI probability: 98.3% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.05,
+      "verdict": "clean",
+      "details": "CE ratio: 1.179 (observer/performer), PP performer: 31.5, PP observer: 58.3",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.049 (higher = more AI-like, n=228 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.488,
+      "verdict": "suspicious",
+      "details": "Perplexity: 31.5 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.333,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 31.5 (score 0.49), DistilGPT-2 PP: 58.3 (score 0.23), agreement: 0.75",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.693,
+      "verdict": "suspicious",
+      "details": "AI probability: 69.3% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.965,
+      "verdict": "slop",
+      "details": "AI probability: 96.5% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.018,
+      "verdict": "clean",
+      "details": "AI probability: 1.8% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.079,
+      "verdict": "clean",
+      "details": "Top-1: 32%, Top-5: 57%, Top-10: 67%, Top-100: 89% of 228 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.334,
+      "verdict": "clean",
+      "details": "Mean log-rank: 1.87 (lower = more AI-like, n=228 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.047,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.795, skew: 0.75, kurtosis: -0.29 (mean=3.4, std=2.7, n=228)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.24,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.644 (mean=37.5, stdev=24.1, n=12 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.345,
+      "verdict": "clean",
+      "details": "Found 1 AI markers (density: 5.2/1k words): \"crucial\"",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.049,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.23 (mean 16 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 10.79 (unique/\u221atotal), Hapax ratio: 0.83 (125/151 words), Yule's K: 41.1",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.709,
+      "verdict": "suspicious",
+      "details": "Flesch Reading Ease: mean=15.2, stdev=15.6, CV=1.023 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 81.5,
+  "overall_verdict": "Slop detected",
+  "engines_flagged": 8,
+  "engines_total": 23,
+  "input_chars": 1459,
+  "created_at": "2026-10-27T16:57:52",
+  "language": "en",
+  "language_support": "supported"
+}

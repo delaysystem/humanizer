@@ -1,0 +1,36 @@
+# config/apply.yaml — isolated deployment rows (A3, frozen before measuring).
+# One deployment per entry. Ports probed free 2026-10-27; never 8000 (A2).
+# Loader: flat keys (dashes literal).
+apply_volume: sloptotal-models-apply
+apply_container_port: 8765
+# Deployment network (origin: D0 precedent — default bridge DNS is broken on
+# this host per A2 history; d3a-br resolves).
+apply_network: d3a-br
+# URL scheme for constructed apply endpoints (origin: loopback deployments
+# serve plain HTTP like the baseline; kept in config so code holds no URL).
+apply_url_scheme: http
+apply_entries: [FIX-D3A-001, FIX-D3A-002, FIX-D3A-003, FIX-D3A-004, FIX-D3A-005, FIX-D3A-006]
+apply_FIX-D3A-001_condition: d3a-i1
+apply_FIX-D3A-001_image: sloptotal-apply-d3a-i1:a3
+apply_FIX-D3A-001_container: sloptotal-apply-1
+apply_FIX-D3A-001_port: 8767
+apply_FIX-D3A-002_condition: d3a-i3
+apply_FIX-D3A-002_image: sloptotal-apply-d3a-i3:a3
+apply_FIX-D3A-002_container: sloptotal-apply-2
+apply_FIX-D3A-002_port: 8768
+apply_FIX-D3A-003_condition: d3a-i5
+apply_FIX-D3A-003_image: sloptotal-apply-d3a-i5:a3
+apply_FIX-D3A-003_container: sloptotal-apply-3
+apply_FIX-D3A-003_port: 8769
+apply_FIX-D3A-004_condition: d3a-i10
+apply_FIX-D3A-004_image: sloptotal-apply-d3a-i10:a3
+apply_FIX-D3A-004_container: sloptotal-apply-4
+apply_FIX-D3A-004_port: 8770
+apply_FIX-D3A-005_condition: d3a-combo-rt-trunc
+apply_FIX-D3A-005_image: sloptotal-apply-d3a-combo-rt-trunc:a3
+apply_FIX-D3A-005_container: sloptotal-apply-5
+apply_FIX-D3A-005_port: 8771
+apply_FIX-D3A-006_condition: d3a-combo-trunc-rt
+apply_FIX-D3A-006_image: sloptotal-apply-d3a-combo-trunc-rt:a3
+apply_FIX-D3A-006_container: sloptotal-apply-6
+apply_FIX-D3A-006_port: 8772

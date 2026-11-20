@@ -1,0 +1,24 @@
+# Threshold simulation {{FIX_ID}} — COMPUTED ESTIMATES (spec only)
+
+- Assumed rule: each logged score is treated as P(AI-like); a text counts as
+  detected iff score >= T. The provider's real thresholds are unknown, so at
+  no T does this rule reproduce the observed verdicts exactly.
+- Probe source: frozen per-detector scores in {{STORE}}/raw + {{STORE}}/records
+  (variant scores) and {{ORIGINALS_STORE}}/records ({{ORIGINALS_N}} human
+  originals for the FPR column).
+- Score-snapshot sha256: {{SNAPSHOT_SHA}} over the sorted
+  (variant_id, detector, orig_score, var_score) list.
+- Grid: T = 0.05..0.95 step 0.05 (method constant; full curve reported, no
+  operating point pre-selected). flips(T) counts passing variants with
+  orig_score >= T and var_score < T; FPR(T) counts human originals with
+  score >= T.
+- Human-FPR bound (absolute): {{FPR_BOUND}}. Curve fact (not a
+  recommendation): {{BEST_FACT}}.
+
+| T | flips(T) | flip_rate | human_FPR | within_bound |
+| --- | --- | --- | --- | --- |
+{{CURVE_MD}}
+- Cannot prove: post-change detection rates, calibration shift, interaction
+  effects across entries, human-control regression, or that any T is optimal.
+  Simulation estimates threshold moves on logged scores only; it never
+  validates a change.

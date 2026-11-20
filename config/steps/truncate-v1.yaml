@@ -1,0 +1,3 @@
+# config/steps/truncate-v1.yaml — hard word cut (origin: D3 decision — mid-S-band
+# target keeps truncated M/L variants analyzable-length while testing length).
+target_words: 115

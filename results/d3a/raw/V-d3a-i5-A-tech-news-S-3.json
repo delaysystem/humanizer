@@ -1,0 +1,178 @@
+{
+  "id": "4d1db33f4c89",
+  "source_type": "text",
+  "source": "The local water authority has approved a new data center planned by Renault to build. The cooling sy",
+  "text_excerpt": "The local water authority has approved a new data center planned by Renault to build. The cooling systems for this facility require a significant amount of water, which has raised concerns among nearby farmers and environmental groups. To address these concerns, the operators have committed to water recycling measures and usage limits. Supporters of the project say that job creation and tax revenue are key benefits for the region. The data center is part of an expanding technological infrastructure in the southwestern United States. Construction is expected to begin early next year, with operations starting within two years.",
+  "word_count": 98,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.987,
+      "verdict": "slop",
+      "details": "AI probability: 98.7% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.99,
+      "verdict": "slop",
+      "details": "AI probability: 99.0% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.122 (observer/performer), PP performer: 21.8, PP observer: 31.7",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.229,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.069 (higher = more AI-like, n=106 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.743,
+      "verdict": "slop",
+      "details": "Perplexity: 21.8 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.749,
+      "verdict": "slop",
+      "details": "GPT-2 Medium PP: 21.8 (score 0.74), DistilGPT-2 PP: 31.7 (score 0.77), agreement: 0.98",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.935,
+      "verdict": "slop",
+      "details": "AI probability: 93.5% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.961,
+      "verdict": "slop",
+      "details": "AI probability: 96.1% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.052,
+      "verdict": "clean",
+      "details": "AI probability: 5.2% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.998,
+      "verdict": "slop",
+      "details": "AI probability: 99.8% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.151,
+      "verdict": "clean",
+      "details": "Top-1: 33%, Top-5: 67%, Top-10: 75%, Top-100: 88% of 106 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.562,
+      "verdict": "suspicious",
+      "details": "Mean log-rank: 1.64 (lower = more AI-like, n=106 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.028,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.869, skew: 1.06, kurtosis: 0.40 (mean=3.1, std=2.7, n=106)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 1.203 (mean=37.0, stdev=44.5, n=6 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.056,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.18 (mean 16 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.024,
+      "verdict": "clean",
+      "details": "Root TTR: 7.68 (unique/\u221atotal), Hapax ratio: 0.84 (64/76 words), Yule's K: 89.5",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.063,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=39.7, stdev=16.3, CV=0.410 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.05,
+      "verdict": "clean",
+      "details": "1 forced-balance structures",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 72.6,
+  "overall_verdict": "Likely AI-generated",
+  "engines_flagged": 11,
+  "engines_total": 23,
+  "input_chars": 632,
+  "created_at": "2026-10-27T00:34:29",
+  "language": "en",
+  "language_support": "supported"
+}

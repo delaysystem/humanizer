@@ -1,0 +1,146 @@
+{
+  "sample_id": "A-science-explainer-S-2",
+  "original_id": "A-science-explainer-S-2",
+  "ground_truth_label": "ai",
+  "condition_id": "none-baseline",
+  "transform_params": {},
+  "provenance": [
+    "d2-baseline-scoring"
+  ],
+  "variant_text_ref": "texts/A-science-explainer-S-2.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.986,
+      "verdict": "slop",
+      "details": "AI probability: 98.6% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.996,
+      "verdict": "slop",
+      "details": "AI probability: 99.6% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.395,
+      "verdict": "clean",
+      "details": "CE ratio: 1.241 (observer/performer), PP performer: 19.8, PP observer: 40.6"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.026,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.008 (higher = more AI-like, n=101 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.796,
+      "verdict": "slop",
+      "details": "Perplexity: 19.8 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.649,
+      "verdict": "suspicious",
+      "details": "GPT-2 Medium PP: 19.8 (score 0.80), DistilGPT-2 PP: 40.6 (score 0.59), agreement: 0.79"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.906,
+      "verdict": "slop",
+      "details": "AI probability: 90.6% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.97,
+      "verdict": "slop",
+      "details": "AI probability: 97.0% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.989,
+      "verdict": "slop",
+      "details": "AI probability: 98.9% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.183,
+      "verdict": "clean",
+      "details": "Top-1: 34%, Top-5: 60%, Top-10: 76%, Top-100: 96% of 101 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.643,
+      "verdict": "slop",
+      "details": "Mean log-rank: 1.56 (lower = more AI-like, n=101 tokens)"
+    },
+    "DivEye": {
+      "score": 0.033,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.825, skew: 0.97, kurtosis: 0.77 (mean=3.0, std=2.5, n=101)"
+    },
+    "Burstiness": {
+      "score": 0.58,
+      "verdict": "suspicious",
+      "details": "Sentence perplexity CV: 0.423 (mean=21.5, stdev=9.1, n=6 sentences). Flat rhythm \u2014 AI-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.054,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.20 (mean 15 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.015,
+      "verdict": "clean",
+      "details": "Root TTR: 7.53 (unique/\u221atotal), Hapax ratio: 0.83 (59/71 words), Yule's K: 85.8"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.202,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=38.0, stdev=20.6, CV=0.542 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine_vs_original": 1.0,
+    "method": "identity-original-untransformed",
+    "fidelity_passing": true
+  },
+  "store_record_id": "d3aorig-A-science-explainer-S-2",
+  "raw_report_id": "7b04d3d15a28",
+  "overall_verbatim": {
+    "overall_score": 80.9,
+    "overall_verdict": "Slop detected",
+    "engines_flagged": 12,
+    "engines_total": 23
+  },
+  "apply_source": {
+    "entry": "FIX-D3A-004",
+    "condition": "d3a-i10",
+    "endpoint": "http://localhost:8770"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$comment": "config/results-schema.json — per-sample results store record (frozen D0, consumed D2+).",
+  "required_fields": ["sample_id", "original_id", "ground_truth_label", "condition_id", "transform_params", "provenance", "variant_text_ref", "per_detector_scores", "fidelity", "store_record_id"],
+  "field_types": {
+    "sample_id": "string",
+    "original_id": "string",
+    "ground_truth_label": "string",
+    "condition_id": "string",
+    "transform_params": "object",
+    "provenance": "array",
+    "variant_text_ref": "string",
+    "per_detector_scores": "object",
+    "fidelity": "object",
+    "store_record_id": "string"
+  }
+}

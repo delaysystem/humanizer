@@ -1,0 +1,488 @@
+{
+  "sample_id": "V-d3a-i10-A-product-review-M-1",
+  "original_id": "A-product-review-M-1",
+  "ground_truth_label": "ai",
+  "condition_id": "d3a-i10",
+  "transform_params": {
+    "pipeline": "d3a-i10",
+    "steps": [
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-d3a-i10-A-product-review-M-1.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.912,
+      "verdict": "slop",
+      "details": "AI probability: 91.2% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.985,
+      "verdict": "slop",
+      "details": "AI probability: 98.5% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.03,
+      "verdict": "clean",
+      "details": "CE ratio: 1.175 (observer/performer), PP performer: 63.6, PP observer: 131.8"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.085 (higher = more AI-like, n=211 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 63.6 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 63.6 (score 0.00), DistilGPT-2 PP: 131.8 (score 0.00), agreement: 1.00"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.51,
+      "verdict": "suspicious",
+      "details": "AI probability: 51.0% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.772,
+      "verdict": "slop",
+      "details": "AI probability: 77.2% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.005,
+      "verdict": "clean",
+      "details": "AI probability: 0.5% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.979,
+      "verdict": "slop",
+      "details": "AI probability: 97.9% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "Top-1: 30%, Top-5: 48%, Top-10: 57%, Top-100: 80% of 211 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.37 (lower = more AI-like, n=211 tokens)"
+    },
+    "DivEye": {
+      "score": 0.052,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.754, skew: 0.67, kurtosis: -0.26 (mean=4.2, std=3.1, n=211)"
+    },
+    "Burstiness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 1.052 (mean=92.1, stdev=96.9, n=12 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.042,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.28 (mean 15 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 11.24 (unique/\u221atotal), Hapax ratio: 0.90 (135/150 words), Yule's K: 45.4"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.034,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=26.2, stdev=10.0, CV=0.382 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine": 0.9822,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 1,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 11,
+      "entities_recall": 0.8182,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 24.66,
+        "variant": 24.01
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1+readability+langrule",
+    "language": {
+      "intended_final": "en",
+      "kannada_fraction": 0.0,
+      "limit": 0.05,
+      "mismatch": false
+    }
+  },
+  "store_record_id": "d3a-V-d3a-i10-A-product-review-M-1",
+  "raw_report_id": "19f66d3b0901",
+  "overall_verbatim": {
+    "overall_score": 70.8,
+    "overall_verdict": "Likely AI-generated",
+    "engines_flagged": 7,
+    "engines_total": 23
+  }
+}

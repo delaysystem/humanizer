@@ -1,0 +1,178 @@
+{
+  "id": "5ab083250b03",
+  "source_type": "text",
+  "source": "Electric cargo bikes promise to replace cars for everyday errands, and the HaulMaster E-Cargo makes ",
+  "text_excerpt": "Electric cargo bikes promise to replace cars for everyday errands, and the HaulMaster E-Cargo makes a compelling case. With a rated capacity of several hundred pounds and long-range dual batteries, it handles grocery runs, school drop-offs, and hardware store trips with ease. The step-through design accommodates riders of different heights, making it practical for shared household use. Real-world testing reveals meaningful time savings, as bike routes often bypass the traffic congestion that slows cars. The ownership equation requires careful consideration. The purchase price is substantial, and accessories for winter riding add further cost. The bicycle's considerable weight makes stair transport impractical, and dealer service locations are sparse in many areas. However, for households whose daily travel falls within a modest radius, the economics can be attractive when compared against the full cost of car ownership. Reduced fuel, insurance, and parking expenses accumulate quickly. After months of daily use, the cargo bike has proven to be a genuinely practical primary vehicle rather than a novelty. It represents one of the most effective tools available for car-free living. Long-term ownership reveals additional considerations worth noting. Maintenance requirements are modest but real: brake pads wear faster under heavy loads, chains and cassettes need replacement roughly twice as often as on unladen bicycles, and the electrical connectors benefit from periodic inspection. Most owners can handle these tasks with basic tools, though the proprietary battery system means replacements must come from the manufacturer at significant cost. Accessory selection meaningfully affects utility. Lockable storage boxes, rain canopies for child passengers, and high-visibility lighting kits transform the bike from fair-weather transport into a year-round vehicle. Resale values have remained strong, reflecting growing demand and limited used inventory. Prospective buyers should test-ride with a realistic load, as handling characteristics change considerably between empty and fully laden configurations.",
+  "word_count": 299,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.036,
+      "verdict": "clean",
+      "details": "AI probability: 3.6% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.989,
+      "verdict": "slop",
+      "details": "AI probability: 98.9% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.313,
+      "verdict": "clean",
+      "details": "CE ratio: 1.226 (observer/performer), PP performer: 38.3, PP observer: 87.5",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.087,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.026 (higher = more AI-like, n=376 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.307,
+      "verdict": "clean",
+      "details": "Perplexity: 38.3 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.139,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 38.3 (score 0.31), DistilGPT-2 PP: 87.5 (score 0.00), agreement: 0.69",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.643,
+      "verdict": "suspicious",
+      "details": "AI probability: 64.3% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.852,
+      "verdict": "slop",
+      "details": "AI probability: 85.2% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.004,
+      "verdict": "clean",
+      "details": "AI probability: 0.4% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.998,
+      "verdict": "slop",
+      "details": "AI probability: 99.8% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.996,
+      "verdict": "slop",
+      "details": "AI probability: 99.6% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.029,
+      "verdict": "clean",
+      "details": "Top-1: 31%, Top-5: 57%, Top-10: 65%, Top-100: 86% of 376 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.215,
+      "verdict": "clean",
+      "details": "Mean log-rank: 1.99 (lower = more AI-like, n=376 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.042,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.786, skew: 0.83, kurtosis: 0.23 (mean=3.6, std=2.9, n=376)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.12,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.722 (mean=55.0, stdev=39.7, n=18 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.018,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.46 (mean 17 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 13.38 (unique/\u221atotal), Hapax ratio: 0.86 (204/236 words), Yule's K: 49.8",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=34.7, stdev=8.0, CV=0.231 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "1 filler qualifiers (3.3/1k words)",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 70.3,
+  "overall_verdict": "Likely AI-generated",
+  "engines_flagged": 6,
+  "engines_total": 23,
+  "input_chars": 2125,
+  "created_at": "2026-10-27T18:03:33",
+  "language": "en",
+  "language_support": "supported"
+}

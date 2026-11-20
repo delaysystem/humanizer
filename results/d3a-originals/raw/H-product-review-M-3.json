@@ -1,0 +1,178 @@
+{
+  "id": "dc63872bbb37",
+  "source_type": "text",
+  "source": "The ProMix 550 has kneaded roughly forty loaves in my kitchen since August, and the motor has not on",
+  "text_excerpt": "The ProMix 550 has kneaded roughly forty loaves in my kitchen since August, and the motor has not once sounded strained \u2014 the same cannot be said of the $180 mixer it replaced, which smelled of hot plastic by loaf six. The 5.5-quart bowl handles double batches of pizza dough without climbing the hook, and the metal gears, confirmed by the pry-happy teardown community, should outlast the ten-year warranty. Attachments are where the price stings: the pasta roller costs $129 extra and the grinder $99, turning a $449 mixer into a $700 system if you want the full lineup. The mixer head also has a slight wobble at high speed that the company calls normal and I call noticeable. Still, for anyone who bakes weekly, the core machine earns its keep. Weekend bread went from a project to a habit. The pasta attachment, bought on sale for $89, gets weekly use and paid for itself versus fresh-pasta prices within two months \u2014 flat sheets are foolproof, though the spaghetti cutter needs dough drier than the manual suggests. Cleanup is honest work: the bowl and hook go in the dishwasher, but flour dust reaches every corner of my kitchen regardless of the pouring shield. Nine months in, the hinge shows zero play and the paint has one chip from a dropped measuring cup. My neighbor's identical machine is twelve years old and still kneading, which is the review that matters most.",
+  "word_count": 240,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.023,
+      "verdict": "clean",
+      "details": "AI probability: 2.3% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.518,
+      "verdict": "suspicious",
+      "details": "AI probability: 51.8% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.168 (observer/performer), PP performer: 67.3, PP observer: 136.9",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.023 (higher = more AI-like, n=303 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 67.3 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 67.3 (score 0.00), DistilGPT-2 PP: 136.9 (score 0.00), agreement: 1.00",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 0.142,
+      "verdict": "clean",
+      "details": "AI probability: 14.2% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.116,
+      "verdict": "clean",
+      "details": "AI probability: 11.6% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "AI probability: 4.5% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.003,
+      "verdict": "clean",
+      "details": "AI probability: 0.3% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.002,
+      "verdict": "clean",
+      "details": "AI probability: 0.2% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.002,
+      "verdict": "clean",
+      "details": "AI probability: 0.2% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Top-1: 29%, Top-5: 52%, Top-10: 57%, Top-100: 77% of 303 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.43 (lower = more AI-like, n=303 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.055,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.765, skew: 0.61, kurtosis: -0.62 (mean=4.2, std=3.2, n=303)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.614,
+      "verdict": "suspicious",
+      "details": "Sentence perplexity CV: 0.401 (mean=67.8, stdev=27.2, n=10 sentences). Flat rhythm \u2014 AI-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.029,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.43 (mean 24 words); Colon density: 8.3/1k words",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.153,
+      "verdict": "clean",
+      "details": "Root TTR: 10.89 (unique/\u221atotal), Hapax ratio: 0.86 (143/167 words), Yule's K: 141.2",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=66.6, stdev=6.9, CV=0.103 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.3,
+      "verdict": "clean",
+      "details": "1 hedging phrases (4.2/1k words)",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 11.5,
+  "overall_verdict": "Clean \u2014 likely human-written",
+  "engines_flagged": 2,
+  "engines_total": 23,
+  "input_chars": 1379,
+  "created_at": "2026-10-26T22:46:25",
+  "language": "en",
+  "language_support": "supported"
+}

@@ -1,0 +1,35 @@
+{
+  "variant_id": "V-d3a-i5-A-science-explainer-S-2",
+  "rounds": [
+    {
+      "round": 1,
+      "cosine": 0.992,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-science-explainer-S-2/round1.txt"
+    },
+    {
+      "round": 2,
+      "cosine": 0.9846,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-science-explainer-S-2/round2.txt"
+    },
+    {
+      "round": 3,
+      "cosine": 0.9825,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-science-explainer-S-2/round3.txt"
+    },
+    {
+      "round": 4,
+      "cosine": 0.9827,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-science-explainer-S-2/round4.txt"
+    },
+    {
+      "round": 5,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i5-A-science-explainer-S-2/round5.txt"
+    }
+  ]
+}

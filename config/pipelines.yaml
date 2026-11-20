@@ -1,0 +1,72 @@
+# config/pipelines.yaml — §3B registry + frozen pipeline declarations (D3).
+# Dataset pipelines are the fixed D3 condition set; probe pipelines exist only
+# to exercise fault/replaceability paths and must never write the dataset store.
+# Loader: flat keys (dots/dashes are literal); step refs are "name@v<ver>".
+
+# --- registry: step name@version -> module (fixed dict in pipeline.py) + params file
+# (paraphrase-bart removed by PLAN Amendment A1; may return as a registry swap.)
+step_bodhan-en-kn_v1_module: steps_bodhan
+step_bodhan-en-kn_v1_params: steps/bodhan-en-kn-v1.yaml
+step_bodhan-kn-en_v1_module: steps_bodhan
+step_bodhan-kn-en_v1_params: steps/bodhan-kn-en-v1.yaml
+step_bodhan-invalid_v1_module: steps_bodhan
+step_bodhan-invalid_v1_params: steps/bodhan-invalid-v1.yaml
+step_truncate_v1_module: steps_truncate
+step_truncate_v1_params: steps/truncate-v1.yaml
+step_truncate_v2_module: steps_truncate_v2
+step_truncate_v2_params: steps/truncate-v2.yaml
+
+# --- pipeline lists
+dataset_pipelines: [cond-rt-kn, cond-truncate-S]
+probe_pipelines: [probe-bodhan-fault, probe-truncate-v2]
+
+# --- dataset pipelines (frozen D3 condition set per Amendment A1; budgets exact)
+pipeline_cond-rt-kn_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_cond-rt-kn_samples: all-ai
+pipeline_cond-rt-kn_budget: 27
+pipeline_cond-truncate-S_steps: [truncate@v1]
+pipeline_cond-truncate-S_samples: ai-bands-M-L
+pipeline_cond-truncate-S_budget: 18
+
+# --- probe pipelines (evidence only; out dirs are run-scoped, never results/d3)
+pipeline_probe-bodhan-fault_steps: [bodhan-invalid@v1]
+pipeline_probe-bodhan-fault_samples: first-ai-S
+pipeline_probe-bodhan-fault_budget: 1
+pipeline_probe-truncate-v2_steps: [truncate@v2]
+pipeline_probe-truncate-v2_samples: ai-bands-M-L
+pipeline_probe-truncate-v2_budget: 18
+
+# --- composition guardrails (§3B rule 2; origin: D3 decision — longest
+# foreseeable pipeline is D3A intensity-10 at 20 legs; 25 bounds runaway
+# composition while allowing it).
+max_pipeline_length: 25
+
+# --- D3A round definition (Probe 1 freeze): one round = en->kn leg + kn->en
+# leg (chat transport, native script both legs). Intensities (Probe 2 freeze):
+# exactly [1, 3, 5, 10] — written here, frozen in dataset manifests before any
+# run; changes need a plan amendment + new dataset version.
+d3a_round_legs: [bodhan-en-kn@v1, bodhan-kn-en@v1]
+d3a_intensities: [1, 3, 5, 10]
+d3a_pipelines: [d3a-i1, d3a-i3, d3a-i5, d3a-i10, d3a-combo-rt-trunc, d3a-combo-trunc-rt]
+pipeline_d3a-i1_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_d3a-i1_samples: all-ai
+pipeline_d3a-i1_budget: 27
+pipeline_d3a-i1_round_every: 2
+pipeline_d3a-i3_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_d3a-i3_samples: all-ai
+pipeline_d3a-i3_budget: 27
+pipeline_d3a-i3_round_every: 2
+pipeline_d3a-i5_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_d3a-i5_samples: all-ai
+pipeline_d3a-i5_budget: 27
+pipeline_d3a-i5_round_every: 2
+pipeline_d3a-i10_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1, bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_d3a-i10_samples: all-ai
+pipeline_d3a-i10_budget: 27
+pipeline_d3a-i10_round_every: 2
+pipeline_d3a-combo-rt-trunc_steps: [bodhan-en-kn@v1, bodhan-kn-en@v1, truncate@v1]
+pipeline_d3a-combo-rt-trunc_samples: all-ai
+pipeline_d3a-combo-rt-trunc_budget: 27
+pipeline_d3a-combo-trunc-rt_steps: [truncate@v1, bodhan-en-kn@v1, bodhan-kn-en@v1]
+pipeline_d3a-combo-trunc-rt_samples: all-ai
+pipeline_d3a-combo-trunc-rt_budget: 27

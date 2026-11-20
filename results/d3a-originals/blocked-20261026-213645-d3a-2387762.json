@@ -1,0 +1,192 @@
+[
+  {
+    "sample_id": "A-science-explainer-S-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-science-explainer-S-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-L-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-L-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-L-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-M-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-M-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-M-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-S-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-S-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "A-tech-news-S-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-L-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-L-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-L-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-M-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-M-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-M-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-S-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-S-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-product-review-S-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-L-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-L-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-L-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-M-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-M-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-M-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-S-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-S-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-science-explainer-S-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-L-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-L-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-L-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-M-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-M-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-M-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-S-1",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-S-2",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+    "sample_id": "H-tech-news-S-3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+  }
+]

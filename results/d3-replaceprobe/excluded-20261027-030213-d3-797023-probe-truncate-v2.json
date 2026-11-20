@@ -1,0 +1,4 @@
+{
+  "pipeline": "probe-truncate-v2",
+  "degraded_variant_ids": []
+}

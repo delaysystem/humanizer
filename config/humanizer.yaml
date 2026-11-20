@@ -1,0 +1,25 @@
+# config/humanizer.yaml — Bodhan Humanizer Pipeline configuration
+# Governs strategy defaults, timeout, retry parameters, and fidelity gates.
+# Origin: Amendment A4 & AGENTS.md §1.
+
+bodhan_base_url: https://api.bodhan.ai
+bodhan_chat_path: /v1/chat/completions
+bodhan_model: indic-translate
+bodhan_key_env_var: INDIC_TRANSLATE_API_KEY
+bodhan_key_file_local: .dev.vars
+
+default_strategy: round-trip
+default_language: kn
+multihop_chain: [hi, kn]
+target_script: native
+
+inter_call_delay_s: 2
+timeout_s: 45
+max_retries: 3
+backoff_429_s: 60
+
+fidelity_min_threshold: 0.80
+fidelity_target_threshold: 0.90
+
+sloptotal_base_url: http://localhost:8765
+sloptotal_analyze_path: /api/analyze

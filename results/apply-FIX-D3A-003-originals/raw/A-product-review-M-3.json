@@ -1,0 +1,178 @@
+{
+  "id": "61978a9bc663",
+  "source_type": "text",
+  "source": "The ProMix 550 stand mixer handles demanding doughs with impressive power and stability. Its generou",
+  "text_excerpt": "The ProMix 550 stand mixer handles demanding doughs with impressive power and stability. Its generous bowl capacity accommodates large batches, and the all-metal drivetrain suggests excellent longevity. In extended testing with weekly bread baking, the motor performed flawlessly. The primary drawback is the cost of attachments, which are sold separately at premium prices. A slight vibration at maximum speed is noticeable though reportedly normal. For serious home bakers, the machine justifies its price through reliable performance. It transforms frequent baking from a chore into a pleasure. Cleanup is refreshingly simple, as the stainless bowl and standard attachments tolerate dishwasher cycles without discoloration. The pouring shield, included in the box, effectively contains flour clouds during initial mixing. Speed control offers ten settings with genuinely useful gradations, from a slow stir that folds in delicate ingredients to a vigorous whip for meringues. The tilt-head design locks securely and provides ample access for adding ingredients mid-recipe. Owners report that the machine remains stable on countertops even with heavy loads, thanks to its considerable weight and non-slip feet. Color options span classic neutrals and bolder finishes.",
+  "word_count": 182,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.119,
+      "verdict": "clean",
+      "details": "AI probability: 11.9% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.989,
+      "verdict": "slop",
+      "details": "AI probability: 98.9% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.194,
+      "verdict": "clean",
+      "details": "CE ratio: 1.205 (observer/performer), PP performer: 61.4, PP observer: 142.8",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.034,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.010 (higher = more AI-like, n=230 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 61.4 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 61.4 (score 0.00), DistilGPT-2 PP: 142.8 (score 0.00), agreement: 1.00",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.384,
+      "verdict": "clean",
+      "details": "AI probability: 38.4% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.933,
+      "verdict": "slop",
+      "details": "AI probability: 93.3% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.018,
+      "verdict": "clean",
+      "details": "AI probability: 1.8% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.983,
+      "verdict": "slop",
+      "details": "AI probability: 98.3% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Top-1: 28%, Top-5: 50%, Top-10: 59%, Top-100: 80% of 230 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.34 (lower = more AI-like, n=230 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.049,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.754, skew: 0.72, kurtosis: -0.26 (mean=4.1, std=3.1, n=230)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 1.191 (mean=97.4, stdev=116.0, n=13 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.038,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.31 (mean 14 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 10.66 (unique/\u221atotal), Hapax ratio: 0.88 (127/145 words), Yule's K: 63.1",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=41.6, stdev=13.0, CV=0.312 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 69.7,
+  "overall_verdict": "Likely AI-generated",
+  "engines_flagged": 5,
+  "engines_total": 23,
+  "input_chars": 1269,
+  "created_at": "2026-10-27T17:05:16",
+  "language": "en",
+  "language_support": "supported"
+}

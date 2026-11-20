@@ -1,0 +1,146 @@
+{
+  "d3a-combo-rt-trunc": {
+    "variant_n": 27,
+    "fidelity_passing_n": 27,
+    "detectors": {
+      "TMR Detector": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-TM-d3a-combo-rt-trunc-001"
+      },
+      "ReMoDetect": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-RM-d3a-combo-rt-trunc-001"
+      },
+      "Binoculars": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-BN-d3a-combo-rt-trunc-001"
+      },
+      "Fast-DetectGPT": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-FD-d3a-combo-rt-trunc-001"
+      },
+      "Perplexity": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-PP-d3a-combo-rt-trunc-001"
+      },
+      "Cross-Perplexity": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-XP-d3a-combo-rt-trunc-001"
+      },
+      "Fakespot": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-FS-d3a-combo-rt-trunc-001"
+      },
+      "E5-Small": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-E5-d3a-combo-rt-trunc-001"
+      },
+      "BERT-tiny RAID": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-BT-d3a-combo-rt-trunc-001"
+      },
+      "OpenAI Detector": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-OA-d3a-combo-rt-trunc-001"
+      },
+      "ChatGPT Detector": {
+        "fidelity_passing_n": 27,
+        "flips": 1,
+        "flip_rate": 0.037,
+        "failure_id": "FAIL-CG-d3a-combo-rt-trunc-001"
+      },
+      "Desklib DeBERTa": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-DL-d3a-combo-rt-trunc-001"
+      },
+      "SuperAnnotate": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-SN-d3a-combo-rt-trunc-001"
+      },
+      "GLTR": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-GL-d3a-combo-rt-trunc-001"
+      },
+      "Log-Rank": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-LR-d3a-combo-rt-trunc-001"
+      },
+      "DivEye": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-DE-d3a-combo-rt-trunc-001"
+      },
+      "Burstiness": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-BU-d3a-combo-rt-trunc-001"
+      },
+      "Linguistic Markers": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-LM-d3a-combo-rt-trunc-001"
+      },
+      "Structural Analysis": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-SA-d3a-combo-rt-trunc-001"
+      },
+      "Vocabulary Richness": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-VR-d3a-combo-rt-trunc-001"
+      },
+      "Formulaic Patterns": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-FP-d3a-combo-rt-trunc-001"
+      },
+      "Readability Uniformity": {
+        "fidelity_passing_n": 27,
+        "flips": 1,
+        "flip_rate": 0.037,
+        "failure_id": "FAIL-RU-d3a-combo-rt-trunc-001"
+      },
+      "Sentiment & Hedging": {
+        "fidelity_passing_n": 27,
+        "flips": 0,
+        "flip_rate": 0.0,
+        "failure_id": "FAIL-SH-d3a-combo-rt-trunc-001"
+      }
+    }
+  }
+}

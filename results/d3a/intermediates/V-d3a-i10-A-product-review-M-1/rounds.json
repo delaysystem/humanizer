@@ -1,0 +1,65 @@
+{
+  "variant_id": "V-d3a-i10-A-product-review-M-1",
+  "rounds": [
+    {
+      "round": 1,
+      "cosine": 0.9873,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round1.txt"
+    },
+    {
+      "round": 2,
+      "cosine": 0.9851,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round2.txt"
+    },
+    {
+      "round": 3,
+      "cosine": 0.9833,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round3.txt"
+    },
+    {
+      "round": 4,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round4.txt"
+    },
+    {
+      "round": 5,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round5.txt"
+    },
+    {
+      "round": 6,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round6.txt"
+    },
+    {
+      "round": 7,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round7.txt"
+    },
+    {
+      "round": 8,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round8.txt"
+    },
+    {
+      "round": 9,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round9.txt"
+    },
+    {
+      "round": 10,
+      "cosine": 0.9822,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-product-review-M-1/round10.txt"
+    }
+  ]
+}

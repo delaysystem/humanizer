@@ -1,0 +1,178 @@
+{
+  "id": "52a382d4ce8c",
+  "source_type": "text",
+  "source": "I read 23 books on the PaperGlow 3 this quarter, which tells you most of what matters. The 300-pixel",
+  "text_excerpt": "I read 23 books on the PaperGlow 3 this quarter, which tells you most of what matters. The 300-pixel-per-inch screen is as close to paper as e-ink gets, and the warm front light makes midnight reading easy on the eyes. Battery life is absurd in the best way \u2014 I charged it in September and again at Thanksgiving. The waterproofing survived a bathtub dunking that would have killed my old model. What keeps it from perfect: the store pushes sponsored titles aggressively, the page-turn buttons I loved on the previous generation are gone, and sideloading library books takes three more taps than it should. None of that outweighs the core experience. At $159, often discounted to $129, it is the reader I recommend to anyone who reads more than a book a month. The library integration deserves credit: borrowing through the public library app sends books to the device in under a minute, and I have not paid for a bestseller all year. Highlights sync to my phone's notes app, which finally killed my habit of photographing pages. The one software gripe that persists is search \u2014 finding a passage in a 900-page history book takes patience the hardware does not deserve. My daughter claimed the old model, and watching a ten-year-old navigate it without instructions says more about the interface than any spec sheet.",
+  "word_count": 225,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.019,
+      "verdict": "clean",
+      "details": "AI probability: 1.9% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.441,
+      "verdict": "suspicious",
+      "details": "AI probability: 44.1% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.184,
+      "verdict": "clean",
+      "details": "CE ratio: 1.203 (observer/performer), PP performer: 49.2, PP observer: 108.4",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.052 (higher = more AI-like, n=276 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.022,
+      "verdict": "clean",
+      "details": "Perplexity: 49.2 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.011,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 49.2 (score 0.02), DistilGPT-2 PP: 108.4 (score 0.00), agreement: 0.98",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 0.018,
+      "verdict": "clean",
+      "details": "AI probability: 1.8% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.118,
+      "verdict": "clean",
+      "details": "AI probability: 11.8% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.674,
+      "verdict": "slop",
+      "details": "AI probability: 67.4% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "AI probability: 1.7% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.031,
+      "verdict": "clean",
+      "details": "AI probability: 3.1% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.076,
+      "verdict": "clean",
+      "details": "Top-1: 32%, Top-5: 56%, Top-10: 62%, Top-100: 83% of 276 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.009,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.19 (lower = more AI-like, n=276 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.817, skew: 0.78, kurtosis: -0.26 (mean=3.9, std=3.2, n=276)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.366,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.562 (mean=54.9, stdev=30.8, n=11 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.593,
+      "verdict": "suspicious",
+      "details": "Found 1 AI markers (density: 8.9/1k words): \"navigate\"",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.049,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.37 (mean 20 words); Colon density: 8.9/1k words",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.07,
+      "verdict": "clean",
+      "details": "Root TTR: 9.84 (unique/\u221atotal), Hapax ratio: 0.80 (118/148 words), Yule's K: 108.1",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=61.9, stdev=11.7, CV=0.189 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 13.0,
+  "overall_verdict": "Clean \u2014 likely human-written",
+  "engines_flagged": 3,
+  "engines_total": 23,
+  "input_chars": 1315,
+  "created_at": "2026-10-27T17:11:45",
+  "language": "en",
+  "language_support": "supported"
+}

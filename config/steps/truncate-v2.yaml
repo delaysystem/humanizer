@@ -1,0 +1,3 @@
+# config/steps/truncate-v2.yaml — sentence-boundary cut (same contract as v1,
+# different implementation; exists for the §3B replaceability check).
+target_words: 115

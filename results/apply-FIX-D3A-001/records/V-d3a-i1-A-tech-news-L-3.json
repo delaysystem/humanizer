@@ -1,0 +1,205 @@
+{
+  "sample_id": "V-d3a-i1-A-tech-news-L-3",
+  "original_id": "A-tech-news-L-3",
+  "ground_truth_label": "ai",
+  "condition_id": "d3a-i1",
+  "transform_params": {
+    "pipeline": "d3a-i1",
+    "steps": [
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-d3a-i1-A-tech-news-L-3.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.022,
+      "verdict": "clean",
+      "details": "AI probability: 2.2% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.968,
+      "verdict": "slop",
+      "details": "AI probability: 96.8% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.167 (observer/performer), PP performer: 40.8, PP observer: 75.9"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.001 (higher = more AI-like, n=342 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.243,
+      "verdict": "clean",
+      "details": "Perplexity: 40.8 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.112,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 40.8 (score 0.24), DistilGPT-2 PP: 75.9 (score 0.00), agreement: 0.76"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.891,
+      "verdict": "slop",
+      "details": "AI probability: 89.1% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.723,
+      "verdict": "slop",
+      "details": "AI probability: 72.3% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.003,
+      "verdict": "clean",
+      "details": "AI probability: 0.3% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.108,
+      "verdict": "clean",
+      "details": "Top-1: 32%, Top-5: 55%, Top-10: 63%, Top-100: 84% of 342 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.131,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.07 (lower = more AI-like, n=342 tokens)"
+    },
+    "DivEye": {
+      "score": 0.051,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.792, skew: 0.69, kurtosis: -0.21 (mean=3.7, std=2.9, n=342)"
+    },
+    "Burstiness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.884 (mean=57.3, stdev=50.6, n=18 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.228,
+      "verdict": "clean",
+      "details": "Found 1 AI markers (density: 3.4/1k words): \"crucial\""
+    },
+    "Structural Analysis": {
+      "score": 0.034,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.35 (mean 16 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 12.72 (unique/\u221atotal), Hapax ratio: 0.84 (184/220 words), Yule's K: 48.3"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.23,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=17.4, stdev=9.9, CV=0.568 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine": 0.8909,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 0,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 15,
+      "entities_recall": 0.8,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 13.47,
+        "variant": 15.01
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1+readability+langrule",
+    "language": {
+      "intended_final": "en",
+      "kannada_fraction": 0.0,
+      "limit": 0.05,
+      "mismatch": false
+    }
+  },
+  "store_record_id": "d3a-V-d3a-i1-A-tech-news-L-3",
+  "raw_report_id": "71ffd9578017",
+  "overall_verbatim": {
+    "overall_score": 75.4,
+    "overall_verdict": "Likely AI-generated",
+    "engines_flagged": 6,
+    "engines_total": 23
+  },
+  "apply_source": {
+    "entry": "FIX-D3A-001",
+    "condition": "d3a-i1",
+    "endpoint": "http://localhost:8767"
+  }
+}

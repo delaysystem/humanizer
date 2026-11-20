@@ -1,0 +1,2 @@
+{"sample_id": "A-product-review-L-1", "step": "bodhan-en-kn", "attempt": 1, "http": 200, "outcome": "scored", "params_echo": {"target_language_code": "kn", "target_script": "native"}, "usage": {"completion_tokens": 815, "prompt_tokens": 385, "total_tokens": 1200}}
+{"sample_id": "A-product-review-L-1", "step": "bodhan-kn-en", "attempt": 1, "http": 200, "outcome": "scored", "params_echo": {"target_language_code": "en", "target_script": "native"}, "usage": {"completion_tokens": 354, "prompt_tokens": 831, "total_tokens": 1185}}

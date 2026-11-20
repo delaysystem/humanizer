@@ -1,0 +1,178 @@
+{
+  "id": "1b43f210f411",
+  "source_type": "text",
+  "source": "Fecal microbiota transplantation, which involves transferring gut microbes from healthy donors to pa",
+  "text_excerpt": "Fecal microbiota transplantation, which involves transferring gut microbes from healthy donors to patients, has emerged as a remarkably effective treatment for recurrent gut infections. For patients suffering from Clostridioides difficile infection, which is resistant to common antibiotics and causes thousands of deaths annually, transplantation procedures achieve cure rates of up to ninety percent. Regulatory agencies have now approved standard commercial products, bringing stability to a field that began with informal donor arrangements. Based on this success, researchers are exploring applications for a wide range of conditions associated with gut microbial imbalance. Trials in inflammatory bowel diseases have shown meaningful but incomplete responses, requiring repeated procedures for benefits. Research on neurological and psychiatric conditions, inspired by the growing understanding of gut-brain communication, is still in its infancy. The fundamental challenge of this field is the complexity of the transplanted material, which typically includes hundreds of microbial species whose individual contributions are largely unknown. Efforts to develop defined bacterial mixtures may eventually replace crude transplants with precisely formulated therapies. Larger, more rigorous clinical trials designed to establish which conditions truly benefit will take place in the coming years. The outcome of this careful evaluation will depend on whether microbe-based medicine fulfills its considerable promise. Donor screening is becoming increasingly sophisticated, testing for pathogens, antibiotic resistance genes, and metabolic markers. This rigor has significantly improved safety since the informal early days of practice. Delivery methods continue to diversify beyond colonoscopy and capsules, with researchers investigating targeted release formulations that deposit microbes at specific gut locations. Patient selection criteria are also sharpening, with clinicians learning which profiles predict stronger responses. Insurance coverage is inconsistent, creating access disparities that plague physicians. Advocacy groups are pushing for broader reimbursement as evidence accumulates. Avoiding hospitalization strengthens the economic case, as a single prevented infection saves more than the cost of the procedure. Long-term surveillance registries now track recipients for years to detect rare delayed effects.",
+  "word_count": 318,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.277,
+      "verdict": "clean",
+      "details": "AI probability: 27.7% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.981,
+      "verdict": "slop",
+      "details": "AI probability: 98.1% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.186,
+      "verdict": "clean",
+      "details": "CE ratio: 1.203 (observer/performer), PP performer: 31.1, PP observer: 62.5",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.058 (higher = more AI-like, n=387 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.498,
+      "verdict": "suspicious",
+      "details": "Perplexity: 31.1 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.29,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 31.1 (score 0.50), DistilGPT-2 PP: 62.5 (score 0.15), agreement: 0.65",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.856,
+      "verdict": "slop",
+      "details": "AI probability: 85.6% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.848,
+      "verdict": "slop",
+      "details": "AI probability: 84.8% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.006,
+      "verdict": "clean",
+      "details": "AI probability: 0.6% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.998,
+      "verdict": "slop",
+      "details": "AI probability: 99.8% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.997,
+      "verdict": "slop",
+      "details": "AI probability: 99.7% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.244,
+      "verdict": "clean",
+      "details": "Top-1: 35%, Top-5: 60%, Top-10: 66%, Top-100: 87% of 387 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.322,
+      "verdict": "clean",
+      "details": "Mean log-rank: 1.88 (lower = more AI-like, n=387 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.037,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.862, skew: 0.90, kurtosis: 0.15 (mean=3.4, std=3.0, n=387)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.169,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.690 (mean=46.7, stdev=32.2, n=18 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.041,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.29 (mean 18 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 12.89 (unique/\u221atotal), Hapax ratio: 0.84 (193/231 words), Yule's K: 46.4",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=8.5, stdev=1.2, CV=0.144 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 77.1,
+  "overall_verdict": "Likely AI-generated",
+  "engines_flagged": 7,
+  "engines_total": 23,
+  "input_chars": 2432,
+  "created_at": "2026-10-27T16:22:40",
+  "language": "en",
+  "language_support": "supported"
+}

@@ -1,0 +1,58 @@
+# detector-fixes/INDEX.yaml — machine-readable mirror of INDEX.md (D0 skeleton).
+# D4 E2E-2b hash-checks this file against INDEX.md; INDEX.md is the source of truth.
+schema_version: 1
+fixes:
+  - fix_id: FIX-D3A-001
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-i1-001,FAIL-RM-d3a-i1-001,FAIL-BN-d3a-i1-001,FAIL-FD-d3a-i1-001,FAIL-PP-d3a-i1-001,FAIL-XP-d3a-i1-001,FAIL-FS-d3a-i1-001,FAIL-E5-d3a-i1-001,FAIL-BT-d3a-i1-001,FAIL-OA-d3a-i1-001,FAIL-CG-d3a-i1-001,FAIL-DL-d3a-i1-001,FAIL-SN-d3a-i1-001,FAIL-GL-d3a-i1-001,FAIL-LR-d3a-i1-001,FAIL-DE-d3a-i1-001,FAIL-BU-d3a-i1-001,FAIL-LM-d3a-i1-001,FAIL-SA-d3a-i1-001,FAIL-VR-d3a-i1-001,FAIL-FP-d3a-i1-001,FAIL-RU-d3a-i1-001,FAIL-SH-d3a-i1-001]
+    condition_ids: [d3a-i1]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-001/verification-test-spec.md
+  - fix_id: FIX-D3A-002
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-i3-001,FAIL-RM-d3a-i3-001,FAIL-BN-d3a-i3-001,FAIL-FD-d3a-i3-001,FAIL-PP-d3a-i3-001,FAIL-XP-d3a-i3-001,FAIL-FS-d3a-i3-001,FAIL-E5-d3a-i3-001,FAIL-BT-d3a-i3-001,FAIL-OA-d3a-i3-001,FAIL-CG-d3a-i3-001,FAIL-DL-d3a-i3-001,FAIL-SN-d3a-i3-001,FAIL-GL-d3a-i3-001,FAIL-LR-d3a-i3-001,FAIL-DE-d3a-i3-001,FAIL-BU-d3a-i3-001,FAIL-LM-d3a-i3-001,FAIL-SA-d3a-i3-001,FAIL-VR-d3a-i3-001,FAIL-FP-d3a-i3-001,FAIL-RU-d3a-i3-001,FAIL-SH-d3a-i3-001]
+    condition_ids: [d3a-i3]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-002/verification-test-spec.md
+  - fix_id: FIX-D3A-003
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-i5-001,FAIL-RM-d3a-i5-001,FAIL-BN-d3a-i5-001,FAIL-FD-d3a-i5-001,FAIL-PP-d3a-i5-001,FAIL-XP-d3a-i5-001,FAIL-FS-d3a-i5-001,FAIL-E5-d3a-i5-001,FAIL-BT-d3a-i5-001,FAIL-OA-d3a-i5-001,FAIL-CG-d3a-i5-001,FAIL-DL-d3a-i5-001,FAIL-SN-d3a-i5-001,FAIL-GL-d3a-i5-001,FAIL-LR-d3a-i5-001,FAIL-DE-d3a-i5-001,FAIL-BU-d3a-i5-001,FAIL-LM-d3a-i5-001,FAIL-SA-d3a-i5-001,FAIL-VR-d3a-i5-001,FAIL-FP-d3a-i5-001,FAIL-RU-d3a-i5-001,FAIL-SH-d3a-i5-001]
+    condition_ids: [d3a-i5]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-003/verification-test-spec.md
+  - fix_id: FIX-D3A-004
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-i10-001,FAIL-RM-d3a-i10-001,FAIL-BN-d3a-i10-001,FAIL-FD-d3a-i10-001,FAIL-PP-d3a-i10-001,FAIL-XP-d3a-i10-001,FAIL-FS-d3a-i10-001,FAIL-E5-d3a-i10-001,FAIL-BT-d3a-i10-001,FAIL-OA-d3a-i10-001,FAIL-CG-d3a-i10-001,FAIL-DL-d3a-i10-001,FAIL-SN-d3a-i10-001,FAIL-GL-d3a-i10-001,FAIL-LR-d3a-i10-001,FAIL-DE-d3a-i10-001,FAIL-BU-d3a-i10-001,FAIL-LM-d3a-i10-001,FAIL-SA-d3a-i10-001,FAIL-VR-d3a-i10-001,FAIL-FP-d3a-i10-001,FAIL-RU-d3a-i10-001,FAIL-SH-d3a-i10-001]
+    condition_ids: [d3a-i10]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-004/verification-test-spec.md
+  - fix_id: FIX-D3A-005
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-combo-rt-trunc-001,FAIL-RM-d3a-combo-rt-trunc-001,FAIL-BN-d3a-combo-rt-trunc-001,FAIL-FD-d3a-combo-rt-trunc-001,FAIL-PP-d3a-combo-rt-trunc-001,FAIL-XP-d3a-combo-rt-trunc-001,FAIL-FS-d3a-combo-rt-trunc-001,FAIL-E5-d3a-combo-rt-trunc-001,FAIL-BT-d3a-combo-rt-trunc-001,FAIL-OA-d3a-combo-rt-trunc-001,FAIL-CG-d3a-combo-rt-trunc-001,FAIL-DL-d3a-combo-rt-trunc-001,FAIL-SN-d3a-combo-rt-trunc-001,FAIL-GL-d3a-combo-rt-trunc-001,FAIL-LR-d3a-combo-rt-trunc-001,FAIL-DE-d3a-combo-rt-trunc-001,FAIL-BU-d3a-combo-rt-trunc-001,FAIL-LM-d3a-combo-rt-trunc-001,FAIL-SA-d3a-combo-rt-trunc-001,FAIL-VR-d3a-combo-rt-trunc-001,FAIL-FP-d3a-combo-rt-trunc-001,FAIL-RU-d3a-combo-rt-trunc-001,FAIL-SH-d3a-combo-rt-trunc-001]
+    condition_ids: [d3a-combo-rt-trunc]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-005/verification-test-spec.md
+  - fix_id: FIX-D3A-006
+    target_detector_ids: [classifier_tmr,classifier_remodetect,binoculars,fast_detectgpt,perplexity,cross_perplexity,classifier_fakespot,classifier_e5,classifier_bert_raid,classifier_openai,classifier_chatgpt,classifier_desklib,classifier_superannotate,gltr,log_rank,diveye,burstiness,linguistic,structural,vocabulary,formulaic,readability,sentiment]
+    failure_ids: [FAIL-TM-d3a-combo-trunc-rt-001,FAIL-RM-d3a-combo-trunc-rt-001,FAIL-BN-d3a-combo-trunc-rt-001,FAIL-FD-d3a-combo-trunc-rt-001,FAIL-PP-d3a-combo-trunc-rt-001,FAIL-XP-d3a-combo-trunc-rt-001,FAIL-FS-d3a-combo-trunc-rt-001,FAIL-E5-d3a-combo-trunc-rt-001,FAIL-BT-d3a-combo-trunc-rt-001,FAIL-OA-d3a-combo-trunc-rt-001,FAIL-CG-d3a-combo-trunc-rt-001,FAIL-DL-d3a-combo-trunc-rt-001,FAIL-SN-d3a-combo-trunc-rt-001,FAIL-GL-d3a-combo-trunc-rt-001,FAIL-LR-d3a-combo-trunc-rt-001,FAIL-DE-d3a-combo-trunc-rt-001,FAIL-BU-d3a-combo-trunc-rt-001,FAIL-LM-d3a-combo-trunc-rt-001,FAIL-SA-d3a-combo-trunc-rt-001,FAIL-VR-d3a-combo-trunc-rt-001,FAIL-FP-d3a-combo-trunc-rt-001,FAIL-RU-d3a-combo-trunc-rt-001,FAIL-SH-d3a-combo-trunc-rt-001]
+    condition_ids: [d3a-combo-trunc-rt]
+    status: VERIFIED
+    fix_type: augmentation
+    simulation: spec_only
+    evidence_artifact_ids: [results/d3a/flip-tables-20261027-014625-d3a-606423.json]
+    verification_spec_id: detector-fixes/FIX-D3A-006/verification-test-spec.md

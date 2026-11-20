@@ -1,0 +1,38 @@
+# config/analysis.yaml — D4 significance + grouping (§1.1 row group) + D3A Probe 4
+# flip-definition freeze. D4 rows stay [probe — D4, frozen before analysis].
+
+# Flip verdict mapping (origin: D3A decision, Probe 4 freeze — suspicious is an
+# intermediate band, neither decision; flips need a clean AI->human transition).
+flip_verdict_map_ai: [slop]
+flip_verdict_map_human: [clean]
+flip_verdict_map_neither: [suspicious]
+# Goal-E failure grouping (origin: D3A decision — one entry per advanced
+# condition carrying its full per-detector flip table; D4 may split entries).
+d3a_failure_grouping: by-condition
+
+# D4 pre-freeze 2026-10-27 (frozen before any per-cell computation; method
+# calibration only — no cell rate was observed before these values were set).
+# Failure mode = one (detector x condition) group; D3A conditions already
+# encode intensity, D3 conditions are single-intensity.
+analysis_grouping_rule: detector-x-condition
+# Minimum fidelity-passing N per group (origin: admits every complete cell —
+# min complete N is 18, known from D1/D3 design, not results; excludes
+# partial/blocked cells).
+analysis_minimum_n: 15
+# Minimum flip rate (origin: at N=27 this means >=3 events; singles/doubles
+# are indistinguishable from the proven provider nondeterminism + noise).
+analysis_minimum_rate: 0.10
+# Binomial CI level + method for reported rates (origin: 95% Wilson, standard
+# for small-N rates; pre-computed separation: 3/27 -> lower 0.038 PASS,
+# 2/27 -> 0.021 FAIL, 2/18 -> 0.031 PASS, 1/18 -> 0.010 FAIL).
+analysis_ci_level: 0.95
+analysis_ci_method: wilson
+analysis_ci_lower_bound: 0.03
+# Severity bands on significant flip rates (origin: conventional bands over
+# the significant range; format low<=X;medium<=Y;high>Y).
+failure_severity_definition: low<=0.20;medium<=0.35;high>0.35
+# Human-FPR bound (origin: conventional 5pp guardrail; the risk template
+# cites 'the frozen D4 bound'. Applied as an ABSOLUTE ceiling for candidate
+# operating points — a baseline-relative reading is impossible because the
+# provider's current thresholds are unknown, so absolute is conservative).
+analysis_human_fpr_bound: 0.05

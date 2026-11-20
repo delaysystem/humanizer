@@ -1,0 +1,180 @@
+{
+  "sample_id": "V-cond-truncate-S-A-product-review-L-3",
+  "original_id": "A-product-review-L-3",
+  "ground_truth_label": "ai",
+  "condition_id": "cond-truncate-S",
+  "transform_params": {
+    "pipeline": "cond-truncate-S",
+    "steps": [
+      {
+        "step": "truncate",
+        "version": "v1",
+        "params": {
+          "target_words": 115,
+          "in_words": 289,
+          "out_words": 115
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "truncate",
+      "version": "v1",
+      "params": {
+        "target_words": 115,
+        "in_words": 289,
+        "out_words": 115
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-cond-truncate-S-A-product-review-L-3.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.959,
+      "verdict": "slop",
+      "details": "AI probability: 95.9% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.98,
+      "verdict": "slop",
+      "details": "AI probability: 98.0% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.391,
+      "verdict": "clean",
+      "details": "CE ratio: 1.240 (observer/performer), PP performer: 66.4, PP observer: 182.2"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.171 (higher = more AI-like, n=139 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 66.4 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 66.4 (score 0.00), DistilGPT-2 PP: 182.2 (score 0.00), agreement: 1.00"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.536,
+      "verdict": "suspicious",
+      "details": "AI probability: 53.6% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.966,
+      "verdict": "slop",
+      "details": "AI probability: 96.6% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.521,
+      "verdict": "suspicious",
+      "details": "AI probability: 52.1% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.757,
+      "verdict": "slop",
+      "details": "AI probability: 75.7% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.155,
+      "verdict": "clean",
+      "details": "Top-1: 33%, Top-5: 50%, Top-10: 59%, Top-100: 78% of 139 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.40 (lower = more AI-like, n=139 tokens)"
+    },
+    "DivEye": {
+      "score": 0.042,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.813, skew: 0.83, kurtosis: 0.37 (mean=4.2, std=3.4, n=139)"
+    },
+    "Burstiness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 1.208 (mean=101.2, stdev=122.3, n=7 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.032,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.36 (mean 14 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 9.26 (unique/\u221atotal), Hapax ratio: 0.90 (91/101 words), Yule's K: 45.2"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.39,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=28.4, stdev=20.5, CV=0.721 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine": 0.8999,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 0,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 16,
+      "entities_recall": 0.5625,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 19.62,
+        "variant": 24.1
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1"
+  },
+  "store_record_id": "d3-V-cond-truncate-S-A-product-review-L-3",
+  "raw_report_id": "20c70a8e5f35",
+  "overall_verbatim": {
+    "overall_score": 43.8,
+    "overall_verdict": "Low risk",
+    "engines_flagged": 7,
+    "engines_total": 23
+  }
+}

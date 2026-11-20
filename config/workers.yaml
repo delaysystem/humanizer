@@ -1,0 +1,24 @@
+# config/workers.yaml — Workers runtime limits + D5 auth-checklist inputs (§1.1 row group)
+# Limits below were read from the Workers limits doc on 2026-10-26 (planning probe);
+# the §3B Worker must re-probe before deployment. Doc:
+# https://developers.cloudflare.com/workers/platform/limits/
+
+# Doc-stated limits (Workers Paid; Free CPU is 10 ms/request).
+workers_cpu_time_paid_default: 30s
+workers_cpu_time_paid_max: 5min
+workers_memory: 128MB
+workers_subrequests_paid: 10000
+workers_simultaneous_outgoing_connections: 6
+workers_request_body_free_pro: 100MB
+# Consequence recorded for §3B: long pipelines use the job-ID orchestrator shape;
+# synchronous execution of the longest config pipeline must be probed before it is claimed.
+workers_pipeline_shape: job-id-orchestrator
+
+# D5 auth-checklist inputs — all [probe — before Workers deployment].
+workers_access_aud: [probe]
+workers_team_domain_or_allowlist_location: [probe]
+workers_jwt_validation_method: [probe]
+workers_secret_names: [probe]
+workers_audit_store_name_retention_delete_perms: [probe]
+workers_rate_limit_implementation: [probe]
+workers_bundle_version_pin: [probe]

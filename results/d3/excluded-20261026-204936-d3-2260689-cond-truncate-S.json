@@ -1,0 +1,4 @@
+{
+  "pipeline": "cond-truncate-S",
+  "degraded_variant_ids": []
+}

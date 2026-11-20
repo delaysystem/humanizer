@@ -1,0 +1,12 @@
+# Verification test spec {{FIX_ID}}
+
+1. Prepare an isolated deployment carrying the candidate change (never the
+   D0-pinned container).
+2. Re-run the {{CONDITION}} pipeline from a clean state against the changed
+   deployment; collect new scores for the {{N}} condition samples.
+3. Compare per-detector flip counts vs the frozen pre-change count {{FLIPS}}:
+   progress = fewer flips at human-FPR within {{FPR_BOUND}} absolute on the
+   {{ORIGINALS_N}} human controls.
+4. Human-control regression: re-score all {{ORIGINALS_N}} human controls; any
+   FPR above {{FPR_BOUND}} fails verification.
+5. The entry is VERIFIED only when 2–4 pass; otherwise REJECTED with analysis.

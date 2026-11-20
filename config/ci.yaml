@@ -1,0 +1,12 @@
+# config/ci.yaml — CI / audit tooling (§1.1 row group)
+
+# Dependency audit tool for harness + Worker.
+# Origin: D0 probe — `bun audit` run 2026-10-26, bun 1.4.2, 94 packages, 0 vulnerabilities.
+# Evidence: build/evidence/D0/probe4-bun-audit.txt. (`npm audit` rejected: requires package-lock.json; repo uses bun.lock.)
+dependency_audit_tool: bun audit
+dependency_audit_fail_on: any-vulnerability
+# Harness core (config/evidence/run/store/checks) is Python-stdlib-only. The D2
+# fidelity scorer adds pinned third-party deps in requirements-fidelity.txt
+# (.venv), audited with pip-audit (evidence build/evidence/D2/probe2-pip-audit.txt).
+# `bun audit` continues to cover package.json/bun.lock (+ Worker).
+harness_third_party_deps: requirements-fidelity.txt (fidelity scorer only)

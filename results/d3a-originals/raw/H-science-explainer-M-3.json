@@ -1,0 +1,178 @@
+{
+  "id": "07fe92638e0f",
+  "source_type": "text",
+  "source": "Microplastics have been found in rainwater on every continent, including Antarctica. The particles \u2014",
+  "text_excerpt": "Microplastics have been found in rainwater on every continent, including Antarctica. The particles \u2014 mostly fibers shed from synthetic clothing and fragments of degraded packaging \u2014 ride wind currents for thousands of miles before washing out of the sky. A 2024 survey of 30 cities measured an average of 120 particles per liter of rainfall, with the highest counts downwind of industrial zones. What this means for health is genuinely uncertain. Laboratory studies show that very high doses inflame lung and gut tissue in mice, but nobody drinks enough rain to match those exposures, and the particles in rain are chemically diverse \u2014 some inert, some carrying additives like flame retardants. Researchers stress two priorities: standardizing measurement, since current studies count different size ranges and cannot be compared, and tracing which sources dominate, because fibers from laundry imply very different policies than fragments from tire wear. Until then, the honest summary is that exposure is universal and consequences are unknown.",
+  "word_count": 160,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.018,
+      "verdict": "clean",
+      "details": "AI probability: 1.8% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.543,
+      "verdict": "suspicious",
+      "details": "AI probability: 54.3% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.138,
+      "verdict": "clean",
+      "details": "CE ratio: 1.195 (observer/performer), PP performer: 57.8, PP observer: 127.5",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.144 (higher = more AI-like, n=183 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 57.8 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 57.8 (score 0.00), DistilGPT-2 PP: 127.5 (score 0.00), agreement: 1.00",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 0.016,
+      "verdict": "clean",
+      "details": "AI probability: 1.6% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.543,
+      "verdict": "suspicious",
+      "details": "AI probability: 54.3% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.947,
+      "verdict": "slop",
+      "details": "AI probability: 94.7% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.002,
+      "verdict": "clean",
+      "details": "AI probability: 0.2% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.184,
+      "verdict": "clean",
+      "details": "AI probability: 18.4% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.02,
+      "verdict": "clean",
+      "details": "AI probability: 2.0% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.003,
+      "verdict": "clean",
+      "details": "Top-1: 30%, Top-5: 52%, Top-10: 58%, Top-100: 81% of 183 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.30 (lower = more AI-like, n=183 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.779, skew: 0.77, kurtosis: -0.05 (mean=4.1, std=3.2, n=183)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.176,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.686 (mean=66.1, stdev=45.3, n=7 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.008,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.54 (mean 23 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 9.75 (unique/\u221atotal), Hapax ratio: 0.86 (104/121 words), Yule's K: 57.3",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=36.2, stdev=6.4, CV=0.176 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "2 filler qualifiers (12.5/1k words)",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 13.8,
+  "overall_verdict": "Clean \u2014 likely human-written",
+  "engines_flagged": 3,
+  "engines_total": 23,
+  "input_chars": 1046,
+  "created_at": "2026-10-26T22:47:50",
+  "language": "en",
+  "language_support": "supported"
+}

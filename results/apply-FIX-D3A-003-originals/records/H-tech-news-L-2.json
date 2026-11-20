@@ -1,0 +1,146 @@
+{
+  "sample_id": "H-tech-news-L-2",
+  "original_id": "H-tech-news-L-2",
+  "ground_truth_label": "human",
+  "condition_id": "none-baseline",
+  "transform_params": {},
+  "provenance": [
+    "d2-baseline-scoring"
+  ],
+  "variant_text_ref": "texts/H-tech-news-L-2.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.013,
+      "verdict": "clean",
+      "details": "AI probability: 1.3% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.444,
+      "verdict": "suspicious",
+      "details": "AI probability: 44.4% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.161 (observer/performer), PP performer: 56.5, PP observer: 108.1"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.066 (higher = more AI-like, n=413 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 56.5 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 56.5 (score 0.00), DistilGPT-2 PP: 108.1 (score 0.00), agreement: 1.00"
+    },
+    "Fakespot": {
+      "score": 0.554,
+      "verdict": "suspicious",
+      "details": "AI probability: 55.4% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.193,
+      "verdict": "clean",
+      "details": "AI probability: 19.3% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.282,
+      "verdict": "clean",
+      "details": "AI probability: 28.2% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.021,
+      "verdict": "clean",
+      "details": "AI probability: 2.1% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.015,
+      "verdict": "clean",
+      "details": "AI probability: 1.5% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.086,
+      "verdict": "clean",
+      "details": "Top-1: 32%, Top-5: 54%, Top-10: 61%, Top-100: 81% of 413 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.27 (lower = more AI-like, n=413 tokens)"
+    },
+    "DivEye": {
+      "score": 0.036,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.819, skew: 0.93, kurtosis: 0.52 (mean=4.0, std=3.3, n=413)"
+    },
+    "Burstiness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.821 (mean=72.3, stdev=59.4, n=17 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.383,
+      "verdict": "clean",
+      "details": "Found 1 AI markers (density: 5.7/1k words): \"robust\""
+    },
+    "Structural Analysis": {
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.36 (mean 20 words); Colon density: 8.6/1k words"
+    },
+    "Vocabulary Richness": {
+      "score": 0.035,
+      "verdict": "clean",
+      "details": "Root TTR: 12.85 (unique/\u221atotal), Hapax ratio: 0.83 (197/238 words), Yule's K: 94.0"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=50.0, stdev=7.3, CV=0.146 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine_vs_original": 1.0,
+    "method": "identity-original-untransformed",
+    "fidelity_passing": true
+  },
+  "store_record_id": "d3aorig-H-tech-news-L-2",
+  "raw_report_id": "e24007e8cb28",
+  "overall_verbatim": {
+    "overall_score": 16.5,
+    "overall_verdict": "Clean \u2014 likely human-written",
+    "engines_flagged": 2,
+    "engines_total": 23
+  },
+  "apply_source": {
+    "entry": "FIX-D3A-003",
+    "condition": "d3a-i5",
+    "endpoint": "http://localhost:8769"
+  }
+}

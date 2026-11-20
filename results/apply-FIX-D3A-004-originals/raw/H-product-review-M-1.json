@@ -1,0 +1,178 @@
+{
+  "id": "e628afebd7d7",
+  "source_type": "text",
+  "source": "After six weeks with the RoboVac X9, I have stopped thinking of it as a gadget and started thinking ",
+  "text_excerpt": "After six weeks with the RoboVac X9, I have stopped thinking of it as a gadget and started thinking of it as the member of the household that does the floors. It maps quickly \u2014 our 1,400-square-foot main level took one pass \u2014 and the room-by-room scheduling actually works: kitchen daily, bedrooms twice a week, office never during calls. Obstacle avoidance is the real upgrade over our old bump-and-spin model. It steered around shoes, cables, and, in one memorable test, a sleeping cat, though it did eat a sock in week two. The self-emptying dock holds about a month of debris and is genuinely quiet. Complaints are minor but real. It cannot climb our half-inch bathroom threshold, so that room stays manual. The app pushed two firmware updates that reset my no-go zones, which is the kind of bug that erodes trust. At $649 it is not cheap, but it replaced a $140 monthly cleaning visit for floors, so the math works in under five months.",
+  "word_count": 166,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "AI probability: 1.7% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.082,
+      "verdict": "clean",
+      "details": "AI probability: 8.2% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.138 (observer/performer), PP performer: 67.4, PP observer: 120.4",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.080 (higher = more AI-like, n=216 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 67.4 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 67.4 (score 0.00), DistilGPT-2 PP: 120.4 (score 0.00), agreement: 1.00",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 0.006,
+      "verdict": "clean",
+      "details": "AI probability: 0.6% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.257,
+      "verdict": "clean",
+      "details": "AI probability: 25.7% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.084,
+      "verdict": "clean",
+      "details": "AI probability: 8.4% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 0.024,
+      "verdict": "clean",
+      "details": "AI probability: 2.4% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.005,
+      "verdict": "clean",
+      "details": "AI probability: 0.5% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Top-1: 28%, Top-5: 51%, Top-10: 59%, Top-100: 79% of 216 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.43 (lower = more AI-like, n=216 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.051,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.774, skew: 0.69, kurtosis: -0.37 (mean=4.2, std=3.3, n=216)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.603,
+      "verdict": "suspicious",
+      "details": "Sentence perplexity CV: 0.408 (mean=78.3, stdev=32.0, n=9 sentences). Flat rhythm \u2014 AI-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected.",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.47 (mean 18 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.04,
+      "verdict": "clean",
+      "details": "Root TTR: 9.13 (unique/\u221atotal), Hapax ratio: 0.83 (99/119 words), Yule's K: 96.2",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "Found 1 formulaic patterns: starter repetition: 56% (\"it\"x3, \"the\"x2)",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=74.9, stdev=9.5, CV=0.126 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected.",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 8.5,
+  "overall_verdict": "Clean \u2014 likely human-written",
+  "engines_flagged": 1,
+  "engines_total": 23,
+  "input_chars": 941,
+  "created_at": "2026-10-27T17:43:27",
+  "language": "en",
+  "language_support": "supported"
+}

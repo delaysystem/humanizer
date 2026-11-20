@@ -1,0 +1,178 @@
+{
+  "id": "d0b77a6ea23f",
+  "source_type": "text",
+  "source": "St. Anne's Hospital has completed its recovery from a devastating ransomware attack that disrupted o",
+  "text_excerpt": "St. Anne's Hospital has completed its recovery from a devastating ransomware attack that disrupted operations for over a week last year. The attack, which entered through a third-party vendor's systems, encrypted critical patient data and forced the diversion of emergency services. Hospital administrators made the difficult decision not to pay the ransom, instead investing millions in rebuilding their entire IT infrastructure. The new systems include advanced network segmentation, mandatory multi-factor authentication, and comprehensive staff training programs. Cybersecurity experts have praised the hospital's transparency in sharing lessons learned from the incident. The total cost of recovery exceeded initial estimates significantly, highlighting the true financial impact of such attacks. Federal regulators have cited the case in discussions about new healthcare security requirements. Hospital officials say the experience, while painful, has left them far better prepared for future threats. Regional hospitals have formed an information-sharing consortium to distribute threat intelligence and coordinate incident response. Tabletop exercises simulating coordinated attacks now occur quarterly across participating facilities. Cybersecurity insurance premiums for healthcare organizations have risen sharply, reflecting the sector's targeting by criminal groups. Board-level oversight of cyber risk has become standard practice rather than an exception.",
+  "word_count": 191,
+  "engine_results": [
+    {
+      "engine_name": "TMR Detector",
+      "score": 0.145,
+      "verdict": "clean",
+      "details": "AI probability: 14.5% (TMR RoBERTa, RAID benchmark)",
+      "description": "RoBERTa-base RAID-trained detector \u2014 97.3% accuracy, 2.3% FPR"
+    },
+    {
+      "engine_name": "ReMoDetect",
+      "score": 0.99,
+      "verdict": "slop",
+      "details": "AI probability: 99.0% (RLHF reward-model detector)",
+      "description": "Reward-model detector targeting RLHF-aligned LLMs (GPT-4, Claude, Llama-chat)"
+    },
+    {
+      "engine_name": "Binoculars",
+      "score": 0.154,
+      "verdict": "clean",
+      "details": "CE ratio: 1.198 (observer/performer), PP performer: 27.5, PP observer: 52.9",
+      "description": "Cross-entropy ratio between two LMs \u2014 agreement signals AI-generated text"
+    },
+    {
+      "engine_name": "Fast-DetectGPT",
+      "score": 0.136,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.041 (higher = more AI-like, n=229 tokens)",
+      "description": "Conditional probability curvature \u2014 AI tokens sit at peaks of the model's distribution"
+    },
+    {
+      "engine_name": "Perplexity",
+      "score": 0.592,
+      "verdict": "suspicious",
+      "details": "Perplexity: 27.5 (lower = more likely AI-generated)",
+      "description": "GPT-2 perplexity scoring \u2014 low perplexity suggests AI-generated text"
+    },
+    {
+      "engine_name": "Cross-Perplexity",
+      "score": 0.432,
+      "verdict": "suspicious",
+      "details": "GPT-2 Medium PP: 27.5 (score 0.59), DistilGPT-2 PP: 52.9 (score 0.34), agreement: 0.75",
+      "description": "Compares perplexity across GPT-2 Large and DistilGPT-2 \u2014 agreement amplifies signal"
+    },
+    {
+      "engine_name": "Fakespot",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)",
+      "description": "RoBERTa-base AI text detector from the APOLLO system"
+    },
+    {
+      "engine_name": "E5-Small",
+      "score": 0.543,
+      "verdict": "suspicious",
+      "details": "AI probability: 54.3% (E5-small LoRA, RAID #2)",
+      "description": "Ultra-lightweight E5 LoRA detector \u2014 33M params, #2 on RAID benchmark"
+    },
+    {
+      "engine_name": "BERT-tiny RAID",
+      "score": 0.891,
+      "verdict": "slop",
+      "details": "AI probability: 89.1% (BERT-tiny, RAID dataset)",
+      "description": "BERT-tiny (4.4M params) trained on RAID dataset \u2014 ultra-fast inference"
+    },
+    {
+      "engine_name": "OpenAI Detector",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)",
+      "description": "RoBERTa fine-tuned by OpenAI to detect GPT-generated text"
+    },
+    {
+      "engine_name": "ChatGPT Detector",
+      "score": 0.041,
+      "verdict": "clean",
+      "details": "AI probability: 4.1% (ChatGPT detector, label='ChatGPT')",
+      "description": "RoBERTa trained specifically on ChatGPT-generated text"
+    },
+    {
+      "engine_name": "Desklib DeBERTa",
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (DeBERTa-v3-large, RAID benchmark leader)",
+      "description": "DeBERTa-v3-large fine-tuned on GPT-4, Claude, Llama \u2014 RAID benchmark leader"
+    },
+    {
+      "engine_name": "SuperAnnotate",
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)",
+      "description": "RoBERTa-large optimized for low false-positive rate \u2014 RAID benchmark"
+    },
+    {
+      "engine_name": "GLTR",
+      "score": 0.29,
+      "verdict": "clean",
+      "details": "Top-1: 36%, Top-5: 61%, Top-10: 67%, Top-100: 90% of 229 tokens",
+      "description": "Token rank distribution \u2014 AI text uses disproportionately top-ranked tokens"
+    },
+    {
+      "engine_name": "Log-Rank",
+      "score": 0.451,
+      "verdict": "suspicious",
+      "details": "Mean log-rank: 1.75 (lower = more AI-like, n=229 tokens)",
+      "description": "Average log-rank of tokens under GPT-2 \u2014 lower rank means more predictable (AI-like)"
+    },
+    {
+      "engine_name": "DivEye",
+      "score": 0.045,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.814, skew: 0.78, kurtosis: -0.23 (mean=3.3, std=2.7, n=229)",
+      "description": "Surprisal diversity \u2014 AI text has unnaturally uniform per-token surprisal"
+    },
+    {
+      "engine_name": "Burstiness",
+      "score": 0.096,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.738 (mean=35.9, stdev=26.5, n=12 sentences). Natural variation \u2014 human-like",
+      "description": "Measures per-sentence perplexity variance \u2014 flat rhythm suggests AI"
+    },
+    {
+      "engine_name": "Linguistic Markers",
+      "score": 0.698,
+      "verdict": "slop",
+      "details": "Found 1 AI markers (density: 10.5/1k words): \"comprehensive\"",
+      "description": "Detects AI-preferred words and phrases (delve, tapestry, landscape...)"
+    },
+    {
+      "engine_name": "Structural Analysis",
+      "score": 0.055,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.19 (mean 16 words)",
+      "description": "Analyzes em-dash usage, sentence uniformity, list density, paragraph regularity, colon patterns"
+    },
+    {
+      "engine_name": "Vocabulary Richness",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 10.92 (unique/\u221atotal), Hapax ratio: 0.86 (132/154 words), Yule's K: 59.1",
+      "description": "Measures type-token ratio, hapax legomena, and Yule's K diversity"
+    },
+    {
+      "engine_name": "Formulaic Patterns",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected.",
+      "description": "Detects clich\u00e9 AI openings, closings, filler patterns, and structural repetition"
+    },
+    {
+      "engine_name": "Readability Uniformity",
+      "score": 0.728,
+      "verdict": "suspicious",
+      "details": "Flesch Reading Ease: mean=13.4, stdev=14.0, CV=1.042 across 4 paragraphs",
+      "description": "Checks if readability stays unnaturally consistent across paragraphs"
+    },
+    {
+      "engine_name": "Sentiment & Hedging",
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "1 filler qualifiers (5.2/1k words)",
+      "description": "Detects excessive hedging, forced balance, vague positivity, and explanatory patterns"
+    }
+  ],
+  "overall_score": 82.3,
+  "overall_verdict": "Slop detected",
+  "engines_flagged": 11,
+  "engines_total": 23,
+  "input_chars": 1470,
+  "created_at": "2026-10-27T16:33:53",
+  "language": "en",
+  "language_support": "supported"
+}

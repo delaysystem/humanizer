@@ -1,0 +1,5 @@
+# config/steps/bodhan-invalid-v1.yaml — FAULT-PROBE ONLY (bhb is refused per
+# provider docs). Exists solely for E2E-2c; must never appear in a dataset
+# pipeline (asserted by the provenance check).
+target_language_code: bhb
+target_script: native

@@ -1,0 +1,28 @@
+# config/datasets.yaml — dataset targets + match rules (frozen D1 for v1).
+# v1 design: 3 topics x 3 length bands x 3 samples x 2 labels = 54 samples.
+# Origin: D1 decision — smallest grid giving per-condition N=27 AI originals for
+# D3 (above a plausible D4 minimum-N), with 3 modern prose registers. New
+# topics/languages/samples land as new dataset versions, never edits to v1.
+
+dataset_labels: [human, ai]
+dataset_topics: [tech-news, science-explainer, product-review]
+dataset_bands: [S, M, L]
+dataset_cell_count: 3
+dataset_total_samples: 54
+# Length bands in whitespace-separated words, exclusive bounds (origin: D1 decision;
+# floor 80 follows provider guidance that <80-word texts give weak signals).
+band_S_min_words: 80
+band_S_max_words: 150
+band_M_min_words: 151
+band_M_max_words: 250
+band_L_min_words: 251
+band_L_max_words: 400
+# Balance/match tolerances: exact (origin: D1 decision — small curated grid, exact counts).
+dataset_count_tolerance: 0
+dataset_matched_pair_tolerance: 0
+# Languages in v1 (origin: D1 decision — English sources; D3 variants add Indic codes
+# per config/bodhan.yaml; adding a language is a new dataset version).
+dataset_languages: [en]
+# Near-duplicate detection for E2E-4 (origin: D1 decision).
+near_duplicate_method: difflib-ratio-on-normalized-text
+near_duplicate_threshold: 0.8

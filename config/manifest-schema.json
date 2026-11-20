@@ -1,0 +1,12 @@
+{
+  "$comment": "config/manifest-schema.json — required fields of a milestone run manifest (D0-named schema source for E2E-1).",
+  "required_fields": ["run_id", "milestone", "created_utc", "config_hashes", "probe_text_file", "probe_text_sha256"],
+  "field_types": {
+    "run_id": "string",
+    "milestone": "string",
+    "created_utc": "string",
+    "config_hashes": "object",
+    "probe_text_file": "string",
+    "probe_text_sha256": "string"
+  }
+}

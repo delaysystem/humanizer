@@ -1,0 +1,47 @@
+# config/bodhan.yaml — Bodhan indic-translate contract (frozen D0 Probe 3)
+# Evidence: build/evidence/D0/probe3*-bodhan-*.json. Pasted dashboard reference: bodhan.txt (scrubbed).
+
+# Key resolution: env var name only; value lives in gitignored .dev.vars locally
+# and in Workers secrets for the §3B Worker. No value is ever recorded here.
+bodhan_key_env_var: INDIC_TRANSLATE_API_KEY
+bodhan_key_file_local: .dev.vars
+bodhan_key_source_local: .dev.vars (gitignored, never committed)
+bodhan_key_source_worker: workers-secrets (wrangler secret put, per environment)
+
+# Frozen working transport (origin: D0 Probe 3b, HTTP 200, 1.7s).
+bodhan_base_url: https://api.bodhan.ai
+bodhan_chat_path: /v1/chat/completions
+bodhan_model: indic-translate
+bodhan_request_fields: [model, messages, target_language_code, target_script]
+bodhan_response_text_pointer: choices[0].message.content
+# POST /translate returned FastAPI-style 404 {"detail":"Not Found"} on 2026-10-26;
+# the pasted reference disagrees with the deployment, so this route is NOT used.
+bodhan_translate_path_status: 404-UNUSABLE-see-probe3
+
+# Language codes: verified-by-call vs stated-in-paste (bodhan.txt). Stated codes must
+# each be confirmed by a real call before D3 uses them in a condition.
+bodhan_codes_verified: [kn]
+bodhan_codes_stated: [as, bn, brx, doi, en, gu, hi, kn, kok, ks, ks-Deva, mai, ml, mni, mni-Beng, mr, ne, or, pa, sa, sat, sd, sd-Arab, ta, te, ur]
+bodhan_codes_refused_stated: [bhb, bho]
+bodhan_script_default: native
+bodhan_indic_to_indic: stated-direct-not-probed
+
+# Error envelope on chat transport (observed 2026-10-26, HTTP 429):
+# {"error":{"message":"Maximum rate limit reached for the model",
+# "type":"throttling_error","param":null,"code":"429"}}.
+bodhan_error_envelope: [observed-429-throttling_error]
+# Rate limits (observed 2026-10-26: per-minute burst limit trips on ~20
+# back-to-back legs; no x-ratelimit/Retry-After headers captured — the runner
+# honors Retry-After when present and otherwise backs off 60 s on 429 while
+# pacing every call 5 s apart).
+bodhan_rate_limits: [observed-burst-429]
+bodhan_inter_call_delay_s: 5
+bodhan_429_backoff_s: 60
+
+# Call budget, D3A phase, enforced per pipeline-runner invocation. Origin: D3A
+# decision — planned 1134 calls/suite-run (intensities 27x(2+6+10+20) + combos
+# 2x27x2 legs); 1250 leaves transport-retry headroom. Largest single invocation
+# is intensity-10 at 540 calls. Outside-runner probe calls (verdict-tracked):
+# D0 probes 2, D3 leg probes 2, D3 smoke fault 1.
+bodhan_max_calls: 1250
+bodhan_d3a_planned_per_suite_run: 1134

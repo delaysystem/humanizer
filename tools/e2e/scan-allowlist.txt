@@ -1,0 +1,2 @@
+# tools/e2e/scan-allowlist.txt — `path-substring | regex | reason`.
+# Empty: no D0 code needs an exemption. Entries require a reason and D0-verdict note.

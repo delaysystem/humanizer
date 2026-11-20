@@ -1,0 +1,65 @@
+{
+  "variant_id": "V-d3a-i10-A-science-explainer-S-2",
+  "rounds": [
+    {
+      "round": 1,
+      "cosine": 0.992,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round1.txt"
+    },
+    {
+      "round": 2,
+      "cosine": 0.9912,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round2.txt"
+    },
+    {
+      "round": 3,
+      "cosine": 0.9846,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round3.txt"
+    },
+    {
+      "round": 4,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round4.txt"
+    },
+    {
+      "round": 5,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round5.txt"
+    },
+    {
+      "round": 6,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round6.txt"
+    },
+    {
+      "round": 7,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round7.txt"
+    },
+    {
+      "round": 8,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round8.txt"
+    },
+    {
+      "round": 9,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round9.txt"
+    },
+    {
+      "round": 10,
+      "cosine": 0.9832,
+      "passing": true,
+      "file": "intermediates/V-d3a-i10-A-science-explainer-S-2/round10.txt"
+    }
+  ]
+}

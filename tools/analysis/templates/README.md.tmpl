@@ -1,0 +1,23 @@
+# {{FIX_ID}} — {{TITLE}}
+
+| field | value |
+| --- | --- |
+| fix_id | {{FIX_ID}} |
+| title | {{TITLE}} |
+| target_detector_ids[] | {{DETECTOR_ID}} |
+| failure_ids[] | {{FAILURE_ID}} |
+| evidence_artifact_ids[] | {{TABLES_PATH}}, {{IDS_PATH}}, {{RECORDS_GLOB}}, {{MANIFEST_PATH}} |
+| proposal_summary | Recalibrate the {{DETECTOR_NAME}} decision threshold for {{CONDITION}} variants (computed tradeoff curve; spec form, Docker deployment untouched). Retraining augmentation is specified as an alternative, not the primary. Rates below are frozen analysis numbers. |
+| config_proposal_path | detector-fixes/{{FIX_ID}}/config-proposal.yaml |
+| augmentation_spec_path_or_none | detector-fixes/{{FIX_ID}}/training-augmentation-spec.md (alternative) |
+| threshold_simulation_path_or_none | detector-fixes/{{FIX_ID}}/threshold-simulation.md (computed estimates) |
+| verification_spec_path | detector-fixes/{{FIX_ID}}/verification-test-spec.md |
+| status | PROPOSED_NOT_APPLIED |
+| created_from | D4 (per-mode grouping per config/analysis.yaml analysis_grouping_rule) |
+
+## Frozen numbers (analysis report {{REPORT_PATH}})
+
+- Condition {{CONDITION}} (store {{STORE}}): {{N}} fidelity-passing variants.
+- Flips (original slop -> variant clean): {{FLIPS}} (rate {{RATE4}}, {{RATE_PCT}}%, 95% Wilson CI [{{CI_LO}}, {{CI_HI}}], N={{N}}). Severity: {{SEVERITY}}.
+- Detection rate on variants: {{DET_VAR}} (95% CI {{DET_VAR_CI}}, N={{N}}); on condition baselines: {{DET_BASE}} (95% CI {{DET_BASE_CI}}, N={{N_BASE}}); delta {{DELTA}}.
+- Score snapshot: {{SNAPSHOT_SHA}}.

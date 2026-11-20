@@ -1,0 +1,35 @@
+# config/api.yaml — Sloptotal local-endpoint contract + §3B API budgets (§1.1 row group)
+# D0 freezes the Sloptotal rows; §3B rows stay [probe] until D3.
+# Loader: tools/harness/config.py (flat `key: value` + inline [lists], `#` comments).
+
+# --- Sloptotal local deployment (frozen D0 Probe 1; evidence build/evidence/D0/frozen/docker-baseline.json)
+sloptotal_container_name: sloptotal-d0
+# Fault-probe endpoint for the no-score-changing-retry check (origin: D2
+# decision — loopback discard port, expected connection-refused; if anything
+# ever listens here the check fails honestly instead of passing vacuously).
+probe_dead_base_url: http://127.0.0.1:9
+# Host port 8000 retired by owner order 2026-10-26 (Amendment A2); the service
+# now listens on 8765 inside and out (uvicorn --port override + matching
+# healthcheck). Nothing in this plan may bind host port 8000 again.
+sloptotal_base_url: http://localhost:8765
+sloptotal_analyze_path: /api/analyze
+sloptotal_engines_path: /api/engines
+sloptotal_report_path_prefix: /api/report/
+sloptotal_ticket_path_prefix: /api/queue/ticket/
+sloptotal_health_path: /health
+# Read-only paths the D0 read-only proof allowlists (origin: D0 Probe 1 log observation).
+sloptotal_read_only_paths: [/health, /api/engines, /api/analyze, /api/queue/ticket/, /api/report/]
+# Minimum analyzable text per provider docs (origin: sloptotal.com/detect/ai-detector-api/).
+sloptotal_min_text_chars: 50
+# Runner transport-error retry (origin: D2 decision — bounded, fixed backoff for
+# checkable timing; retries NEVER follow a successful score response).
+runner_retry_max_attempts: 3
+runner_retry_backoff_s: 2
+
+# --- §3B rate limits / quotas / caps (all [probe — D0/D3]; check depending on these is NOT-RUN)
+api_rate_limit_per_researcher: [probe]
+api_quota_per_researcher: [probe]
+api_request_size_cap: [probe]
+api_response_size_cap: [probe]
+api_max_pipeline_length: [probe]
+api_per_step_budgets: [probe]

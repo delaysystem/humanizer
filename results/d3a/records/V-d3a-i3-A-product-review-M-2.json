@@ -1,0 +1,264 @@
+{
+  "sample_id": "V-d3a-i3-A-product-review-M-2",
+  "original_id": "A-product-review-M-2",
+  "ground_truth_label": "ai",
+  "condition_id": "d3a-i3",
+  "transform_params": {
+    "pipeline": "d3a-i3",
+    "steps": [
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-d3a-i3-A-product-review-M-2.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.68,
+      "verdict": "slop",
+      "details": "AI probability: 68.0% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.99,
+      "verdict": "slop",
+      "details": "AI probability: 99.0% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.170 (observer/performer), PP performer: 34.2, PP observer: 62.3"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.116,
+      "verdict": "clean",
+      "details": "Mean curvature: 0.035 (higher = more AI-like, n=232 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.416,
+      "verdict": "suspicious",
+      "details": "Perplexity: 34.2 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.262,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 34.2 (score 0.42), DistilGPT-2 PP: 62.3 (score 0.15), agreement: 0.74"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.653,
+      "verdict": "slop",
+      "details": "AI probability: 65.3% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.943,
+      "verdict": "slop",
+      "details": "AI probability: 94.3% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.871,
+      "verdict": "slop",
+      "details": "AI probability: 87.1% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.982,
+      "verdict": "slop",
+      "details": "AI probability: 98.2% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.999,
+      "verdict": "slop",
+      "details": "AI probability: 99.9% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.289,
+      "verdict": "clean",
+      "details": "Top-1: 36%, Top-5: 61%, Top-10: 69%, Top-100: 86% of 232 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.308,
+      "verdict": "clean",
+      "details": "Mean log-rank: 1.89 (lower = more AI-like, n=232 tokens)"
+    },
+    "DivEye": {
+      "score": 0.037,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.838, skew: 0.92, kurtosis: -0.04 (mean=3.5, std=3.0, n=232)"
+    },
+    "Burstiness": {
+      "score": 0.14,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.709 (mean=43.6, stdev=30.9, n=14 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.032,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.36 (mean 14 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.026,
+      "verdict": "clean",
+      "details": "Root TTR: 10.29 (unique/\u221atotal), Hapax ratio: 0.84 (121/144 words), Yule's K: 90.6"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=45.6, stdev=11.4, CV=0.250 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine": 0.9742,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 1,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 11,
+      "entities_recall": 0.6364,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 34.28,
+        "variant": 43.71
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1+readability+langrule",
+    "language": {
+      "intended_final": "en",
+      "kannada_fraction": 0.0,
+      "limit": 0.05,
+      "mismatch": false
+    }
+  },
+  "store_record_id": "d3a-V-d3a-i3-A-product-review-M-2",
+  "raw_report_id": "7e7879da1c11",
+  "overall_verbatim": {
+    "overall_score": 61.2,
+    "overall_verdict": "Likely AI-generated",
+    "engines_flagged": 9,
+    "engines_total": 23
+  }
+}

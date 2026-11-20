@@ -1,0 +1,9 @@
+# FIX-D3A-005 config proposal (spec; Docker deployment untouched)
+consistency_check:
+  name: cross-intensity-verdict-stability
+  inputs: [d3a-i1-verdict, d3a-i3-verdict, d3a-i5-verdict, d3a-i10-verdict]
+  rule: flag-for-review-when-verdicts-disagree
+  action: route-to-human-review-never-auto-decide
+threshold_recalibration:
+  method: refit-on-augmented-scores-at-apply-time
+  constraint: human-false-positive-rate-must-not-regress

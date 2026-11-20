@@ -1,0 +1,563 @@
+import requests
+
+resp = requests.post(
+    "https://api.bodhan.ai/v1/chat/completions",
+    headers={"Authorization": "Bearer $BODHAN_API_KEY"},
+    json={
+        "model": "indic-translate",
+        "messages": [{"role": "user", "content": "The meeting has been postponed."}],
+        "target_language_code": "kn",
+        "target_script": "native"
+    },
+)
+
+print(resp.json()["choices"][0]["message"]["content"])
+
+All four models sit behind https://api.bodhan.ai. The /v1 routes take OpenAI-style requests, so an existing SDK only needs a new base_url.
+Authentication
+
+Send your key as a bearer token on every request. Keys live in the dashboard; if you do not have an account yet, create one.
+Authorization
+
+Authorization: Bearer $BODHAN_API_KEY
+
+Copy
+Speech to Text API
+POST
+https://api.bodhan.ai/v1/audio/transcriptions
+multipart/form-data
+
+Turns speech into text in 25 Indian languages and English. The transcript comes back in the language that was spoken.
+
+    Send the audio as multipart/form-data. WAV is the documented format; FLAC, OGG and MP3 are also accepted.
+    Each request takes up to 30 seconds of audio; longer audio is rejected.
+    Billing is per second of audio, so trim silence before you send it.
+
+Authentication
+
+    Authorization: Bearer <YOUR_BODHAN_KEY> header (required)
+
+Request
+Body (multipart/form-data)
+
+    file (file, required) — The audio to transcribe.
+
+    model (string, required) — indic-transcribe.
+
+    language (enum, optional) — Language of the audio. Omit it and the vendor auto-detects, but naming it is the difference between a correct transcription and a garbled one for non-English audio, so pass it whenever you know it.
+
+    Available options:
+    Code 	Language 	Code 	Language
+    as 	Assamese 	mai 	Maithili
+    bhb 	Bhili 	ml 	Malayalam
+    bho 	Bhojpuri 	mni 	Manipuri
+    bn 	Bengali 	mr 	Marathi
+    brx 	Bodo 	ne 	Nepali
+    doi 	Dogri 	or 	Odia
+    en 	English (Indian and global) 	pa 	Punjabi
+    gu 	Gujarati 	sa 	Sanskrit
+    hi 	Hindi 	sat 	Santali
+    kn 	Kannada 	sd 	Sindhi
+    kok 	Konkani 	ta 	Tamil
+    ks 	Kashmiri 	te 	Telugu
+    ur 	Urdu 		
+
+Response
+200
+
+    text (string, required) — The transcript.
+
+415
+
+The audio's duration could not be measured, so the request cannot be metered and was not transcribed. Send WAV, the documented format; FLAC, OGG and MP3 are also accepted. Containers such as M4A, AAC, WebM and AMR are refused with this status.
+Request
+cURL
+Python
+TypeScript
+
+curl https://api.bodhan.ai/v1/audio/transcriptions \
+  -H "Authorization: Bearer $BODHAN_API_KEY" \
+  -F "file=@sample_hindi.wav" \
+  -F "model=indic-transcribe" \
+  -F "language=hi"
+
+Copy
+Response
+
+{
+  "text": "नमस्ते, आप कैसे हैं?"
+}
+
+Copy
+Translation API
+POST
+https://api.bodhan.ai/translate
+application/json
+
+Translates text between English and 22 Indian languages, in native script, Roman script or code-mixed. You send the text and a target language; the gateway writes the prompt.
+
+Two transports produce identical output for equivalent input:
+transport 	when to use
+POST /translate 	the product surface. Prefer this.
+POST /v1/chat/completions 	callers with existing chat-completions tooling
+
+    There is no source-language field, on either transport. The prompt names only the target and the model infers the source, so a declared source cannot change the result. A request is never rejected for omitting one.
+    Decoding is fixed on the server. temperature, max_tokens, stream and the other generation settings are rejected rather than ignored. Use max_output_tokens to shrink the output budget.
+
+Authentication
+
+    Authorization: Bearer <YOUR_BODHAN_KEY> header (required)
+
+Request
+Body (application/json)
+
+    text (string, required) — The text to translate.
+
+    target_language (enum, required) — Language to translate into. No default, no auto-detection. Any pair works, Indic to Indic included. Available options:
+    Code 	Language 	Code 	Language 	Code 	Language
+    as 	Assamese 	kok 	Konkani 	or 	Odia
+    bn 	Bengali 	ks 	Kashmiri (Perso-Arabic) 	pa 	Punjabi
+    brx 	Bodo 	ks-Deva 	Kashmiri (Devanagari) 	sa 	Sanskrit
+    doi 	Dogri 	mai 	Maithili 	sat 	Santali
+    en 	English 	ml 	Malayalam 	sd 	Sindhi (Devanagari)
+    gu 	Gujarati 	mni 	Manipuri (Meitei) 	sd-Arab 	Sindhi (Perso-Arabic)
+    hi 	Hindi 	mni-Beng 	Manipuri (Bengali) 	ta 	Tamil
+    kn 	Kannada 	mr 	Marathi 	te 	Telugu
+    		ne 	Nepali 	ur 	Urdu
+
+    26 codes over 23 languages — Kashmiri, Manipuri and Sindhi each ship in two scripts. Bare codes resolve to ks Perso-Arabic, mni Meitei, sd Devanagari.
+
+    bhb (Bhili) and bho (Bhojpuri) are not supported. They appear in the speech API's language list, so a caller reusing that list will send them; they are refused rather than mapped to a neighbouring language.
+
+    script (enum, optional) — native (default), roman or codemix.
+    value 	result
+    native 	the target language in its own script
+    roman 	the target language written in Latin letters — not a translation into English
+    codemix 	the native script is kept, and which words stay English changes
+
+    script does not apply when target_language is en, and roman there is rejected. codemix is unavailable for en, ks-Deva and sd-Arab.
+
+    max_output_tokens (integer, optional) — Overrides the server's own sizing. It cannot exceed what the context window has left.
+
+Response
+200
+
+    translation (string) — The translated text.
+    target_language (string) — Echoed back normalised, not as sent.
+    script (string) — Echoed back normalised.
+    truncated (boolean) — true when the output hit the token budget and is incomplete. Check this. A truncated translation reads fluently and simply stops; nothing else distinguishes it from a complete one.
+    usage (object) — prompt_tokens, completion_tokens, total_tokens. Only output tokens are billed.
+
+Every response carries a correlation id in the x-request-id header, and the published rate limits in x-ratelimit-limit-requests and x-ratelimit-limit-parallel-requests. Retries count against the request limit.
+Errors
+
+One envelope, for every failure:
+
+{"error": {"message": "...", "code": "unsupported_language", "request_id": "..."}}
+
+There is no error key on success and no translation key on failure — branch on presence. code is a stable symbolic string; branch on it rather than parsing message.
+Status 	code 	When
+400 	invalid_request_error 	missing or malformed required field
+400 	unsupported_language 	unknown code, or bhb / bho
+400 	invalid_script 	script: "roman" with target_language: "en"
+400 	unsupported_script_for_language 	codemix for en, ks-Deva or sd-Arab
+400 	invalid_prompt 	a system turn, or more than one user turn, on the chat endpoint
+401 	invalid_api_key_error 	missing or invalid bearer token
+413 	payload_too_large 	input above the documented limit
+429 	rate_limit_exceeded_error 	above the request or concurrency limit
+5xx 	internal_error 	upstream failure
+
+Treat an auth error as retryable when the same key has recently succeeded.
+Request
+cURL
+Python
+TypeScript
+
+curl https://api.bodhan.ai/translate \
+  -H "Authorization: Bearer $BODHAN_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "The meeting has been postponed.",
+    "target_language": "kn"
+  }'
+
+Copy
+Response
+
+{
+  "translation": "ಸಭೆಯನ್ನು ಮುಂದೂಡಲಾಗಿದೆ.",
+  "target_language": "kn",
+  "script": "native",
+  "truncated": false,
+  "usage": {"prompt_tokens": 12, "completion_tokens": 9, "total_tokens": 21}
+}
+
+Copy
+Transliteration API
+POST
+https://api.bodhan.ai/transliterate
+application/json
+
+Rewrites text into a different script without translating it. Same language in, same language out — only the script changes. 22 Indian languages.
+
+This is a separate route from translation, with its own verb, because the two are different tasks. Asking the model to "translate" Hindi into Hindi would teach it that translating sometimes means leaving the content alone.
+
+    The text goes in text with no instruction; the gateway writes the prompt.
+    Decoding is fixed on the server. Generation settings are rejected rather than ignored. Use max_output_tokens to shrink the output budget.
+
+Authentication
+
+    Authorization: Bearer <YOUR_BODHAN_KEY> header (required)
+
+Request
+Body (application/json)
+
+    text (string, required) — The text to rewrite.
+
+    language (enum, required) — The language of the text, and of the result. It names both sides, which is why there is no separate target. One of the 22 Indic codes:
+    Code 	Language 	Code 	Language 	Code 	Language
+    as 	Assamese 	kok 	Konkani 	pa 	Punjabi
+    bn 	Bengali 	ks 	Kashmiri (Perso-Arabic) 	sa 	Sanskrit
+    brx 	Bodo 	ks-Deva 	Kashmiri (Devanagari) 	sat 	Santali
+    doi 	Dogri 	mai 	Maithili 	sd 	Sindhi (Devanagari)
+    gu 	Gujarati 	ml 	Malayalam 	sd-Arab 	Sindhi (Perso-Arabic)
+    hi 	Hindi 	mni 	Manipuri (Meitei) 	ta 	Tamil
+    kn 	Kannada 	mni-Beng 	Manipuri (Bengali) 	te 	Telugu
+    		mr 	Marathi 	ur 	Urdu
+    		ne 	Nepali 		
+    		or 	Odia 		
+
+    en is not a transliteration target and is rejected — English is already Latin, so there is nothing to convert.
+
+    script (enum, optional) — roman (default) or native. Note this default differs from /translate, which defaults to native. codemix does not apply here and is rejected.
+
+    max_output_tokens (integer, optional) — Overrides the server's own sizing.
+
+Response
+200
+
+    transliteration (string) — The rewritten text.
+    language, script (string) — Echoed back normalised, not as sent.
+    truncated (boolean) — true when the output hit the token budget. Check this. Truncated output reads fluently and simply stops.
+    usage (object) — prompt_tokens, completion_tokens, total_tokens. Only output tokens are billed.
+
+Every response carries x-request-id and the published rate limits in x-ratelimit-limit-requests and x-ratelimit-limit-parallel-requests.
+Errors
+
+Same envelope as every other route:
+
+{"error": {"message": "...", "code": "invalid_script", "request_id": "..."}}
+
+Status 	code 	When
+400 	invalid_request_error 	missing or malformed required field
+400 	unsupported_language 	unknown code
+400 	invalid_script 	language: "en", or script: "codemix"
+401 	invalid_api_key_error 	missing or invalid bearer token
+413 	payload_too_large 	input above the documented limit
+429 	rate_limit_exceeded_error 	above the request or concurrency limit
+5xx 	internal_error 	upstream failure
+Request
+cURL
+Python
+TypeScript
+
+curl https://api.bodhan.ai/transliterate \
+  -H "Authorization: Bearer $BODHAN_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "पनडुब्बी के अंदर पहुँच कर ...",
+    "language": "hi",
+    "script": "roman"
+  }'
+
+Copy
+Response
+
+{
+  "transliteration": "Panadubbi ke andar pahunch kar panadubbi ki karyapranali ko samajhna ek anokha aur romanchak anubhav hota hai.",
+  "language": "hi",
+  "script": "roman",
+  "truncated": false
+}
+
+Copy
+Text to Speech API
+POST
+https://api.bodhan.ai/v1/audio/speech
+application/json
+
+Reads text aloud in 22 Indian languages and English, in 45 voices. The response is a WAV file.
+
+    The language, and optionally a speaking style, go in instructions as a JSON string. Any voice can read any language.
+    Keep each request to a sentence or two, about 30 seconds of speech. Longer text is not split for you.
+    The response is audio/wav, PCM16 at 24 kHz, mono.
+
+Authentication
+
+    Authorization: Bearer <YOUR_BODHAN_KEY> header (required)
+
+Request
+Body (application/json)
+
+    model (string, required) — indic-speak.
+
+    input (string, required) — The text to read. Numbers, dates and currency are read out in the language given.
+
+    voice (enum, required) — The speaker, by name. The 45 voices are grouped below by the language each was recorded in, but any voice can read any of the languages. Available options:
+    Code 	Language 	Female 	Male
+    as 	Assamese 	Prastuti 	Ankur
+    bn 	Bengali 	Ishita 	Sourav
+    brx 	Bodo 	Gwrbw 	Sansuma
+    doi 	Dogri 	Preeti 	Sham
+    gu 	Gujarati 	Dhara 	Parth
+    hi 	Hindi 	Kavya, Suhani 	Amit
+    kn 	Kannada 	Deepika 	Adarsh
+    kok 	Konkani 	Anjali 	Sandeep
+    ks 	Kashmiri 	Zoon 	Ishfaq
+    mai 	Maithili 	Vaidehi 	Madhukar
+    ml 	Malayalam 	Lakshmi 	Kiran
+    mni 	Manipuri 	Thoibi 	Chaoba
+    mr 	Marathi 	Anagha 	Chinmay
+    ne 	Nepali 	Srijana 	Sagar
+    or 	Odia 	Itishree 	Akash
+    pa 	Punjabi 	Kaur 	Manpreet
+    sa 	Sanskrit 	Bharati 	Aryaman
+    sat 	Santali 	Phulmani 	Sibu
+    sd 	Sindhi 	Moomal 	Rano
+    ta 	Tamil 	Anitha 	Arun
+    te 	Telugu 	Sravani 	Vamsi
+    ur 	Urdu 	Saba 	Zaid
+
+    instructions (string, required) — A JSON string with lang and, if you want one, style: "{\"lang\": \"hi\", \"style\": \"news\"}".
+
+        lang (required) — Language of the text. Available options:
+        Code 	Language 	Code 	Language
+        as 	Assamese 	mni 	Manipuri
+        bn 	Bengali 	mr 	Marathi
+        brx 	Bodo 	ne 	Nepali
+        doi 	Dogri 	or 	Odia
+        en 	English 	pa 	Punjabi
+        gu 	Gujarati 	sa 	Sanskrit
+        hi 	Hindi 	sat 	Santali
+        kn 	Kannada 	sd 	Sindhi
+        kok 	Konkani 	ta 	Tamil
+        ks 	Kashmiri 	te 	Telugu
+        mai 	Maithili 	ur 	Urdu
+        ml 	Malayalam 		
+
+        style (optional) — Delivery. Leave it out for the voice's neutral reading. Available options: AIR style news, Customer Care, TV style news, advertisements, anger, children's stories, disgust, educational lecture, fear, happy, news, sad, single person narration audiobook, surprise.
+
+Response
+200
+
+    The WAV audio itself, with Content-Type: audio/wav. PCM16, 24 kHz, mono.
+
+422
+
+input was empty, voice, lang or style was not one of the values above, or instructions had no lang. The message names the unknown value and lists what is accepted.
+Request
+cURL
+Python
+TypeScript
+
+curl https://api.bodhan.ai/v1/audio/speech \
+  -H "Authorization: Bearer $BODHAN_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "indic-speak", "input": "कक्षा नौ बजे शुरू होती है।", "voice": "Kavya", "instructions": "{\"lang\": \"hi\"}"}' \
+  --output class.wav
+
+Copy
+Response
+
+Content-Type: audio/wav
+
+(WAV audio, PCM16 24 kHz mono)
+
+Copy
+Document OCR API
+POST
+https://api.bodhan.ai/v1/chat/completions
+application/json
+
+Extracts text and layout from a document image using Indic-OCR, served as the model indic-ocr. The page is returned as reading-ordered Markdown, alongside the layout blocks it was assembled from. Output is in the script of the input document.
+
+The API follows the OpenAI chat completions format, and the transcribed page arrives in choices[0].message.content. Layout information is returned in an additional top-level blocks field.
+Note:
+
+    Send a whole document page image. The model detects layout and crops blocks itself; pre-cropping is unnecessary.
+    We support PNG and JPEG only. PDFs are not supported.
+    The image is sent inline as a base64 data URI, in a single user message. We support one image per request; there is no page or batch parameter.
+    The request carries no prompt customization support.
+    There is no language field. The script is inferred from the image itself.
+    A single call returns both layout detection and transcription.
+
+Authentication
+
+    Authorization: Bearer <YOUR_BODHAN_KEY> header (required)
+
+Request
+Body (application/json)
+
+    model (string, required): Must be "indic-ocr".
+    messages (array, required): Exactly one user message whose content is an array holding a single image_url part. The image is a data URI: "data:image/png;base64,<base64-encoded bytes>".
+    table_format (enum, optional): How tables are rendered. "html" (default) preserves table structure, including merged cells; "markdown" emits a GitHub-style pipe table. See Tables below.
+    max_tokens (integer, optional): Transcription limit per block, not per page. Defaults to 2048. Raise it for pages containing large tables; see Truncation below.
+
+Response
+200
+
+Successful Response
+
+A standard chat.completion object with one additional top-level field, blocks.
+
+    id (string): Request identifier.
+    created (integer): Unix timestamp.
+    model (string): "indic-ocr".
+    object (string): "chat.completion".
+    choices (array): Exactly one choice.
+        finish_reason (string): "stop".
+        index (integer): 0.
+        message.role (string): "assistant".
+        message.content (string): The full page as reading-ordered Markdown.
+    usage (object): prompt_tokens, completion_tokens and total_tokens, summed across every block on the page.
+    blocks (array): The detected layout blocks, in reading order.
+
+blocks is present at top-level, not inside choices.
+Block object
+
+    order (integer): Reading-order index, from 0.
+    label (string): The block's layout role, e.g. Paragraph, Section-title. See Layout labels below.
+    type (string): A coarser grouping of label, e.g. Text, Title, SectionHeader, Caption, Table, Picture.
+    bbox_xyxy (array of 4 numbers): Bounding box as [x_min, y_min, x_max, y_max], in pixels of the image you uploaded, origin at the top-left.
+    conf (number): Layout detection confidence, 0.0 to 1.0. This scores block detection, not transcription accuracy.
+    text (string): The block's transcribed text, or "" for blocks that carry none.
+
+Layout labels
+
+label is drawn from a fixed 37-class taxonomy:
+			
+Advertisement 	Equation 	Infobox 	Sub-section-title
+Answer 	Expression 	List 	Sub-sub-section-title
+Author 	Flag 	MCQ 	Table
+Chapter-end-section 	Folio 	Page-number 	Table-caption
+Chapter-title 	Footer 	Paragraph 	Table-of-contents
+Chart 	Footnote 	Placeholder-text 	Title
+Code 	Header 	Question 	Website-link
+Contact-info 	Image 	Reference 	
+Dateline 	Image-caption 	Section-title 	
+Diagram 	Index 	Solved-example 	
+
+Some blocks are detected but not transcribed. They are returned with text: "" and keep their place in reading order, so bounding boxes stay available even where there is no text:
+
+    Pictorial regions, such as Image, Chart, Diagram and figures.
+    Page furniture, such as Header, Footer and Advertisement.
+
+Markdown output
+
+message.content is the blocks' text joined in reading order, separated by blank lines:
+
+    Headings are not marked up. A Section-title appears as a plain paragraph, not as ##. Document structure is available from blocks[].label, not from the Markdown.
+    Mathematics is LaTeX, using $...$ inline and $$...$$ for display equations. Indic script inside a formula is wrapped in \text{...}.
+    Words split across a line break are rejoined, so exam-\nple is emitted as example.
+    Tables appear as HTML or Markdown according to table_format.
+    Pictorial blocks will not be shown in the Markdown, though they remain in blocks.
+
+Tables
+
+table_format trades structural fidelity against size:
+	html (default) 	markdown
+Merged cells 	preserved via rowspan / colspan 	flattened into separate columns
+In-cell line breaks 	<br/> 	removed
+
+Use the default html when a table has merged or multi-level headers, and markdown when the table is simple and you want output that reads well as plain text.
+
+Because HTML is substantially larger, a long table is the most common reason to exceed max_tokens. A 50-row dense table may need max_tokens of 4096 as HTML, but fits the 2048 default as Markdown.
+Truncation
+
+max_tokens applies per block, so the default of 2048 is ample for ordinary prose.
+
+Large tables are the realistic exception. If any block exceeds the limit, the request fails with 502 and the page is not returned.
+
+In that case, please raise max_tokens and retry. For documents known to contain large tables, raise it up front rather than after a failure.
+Errors
+401
+
+Missing, invalid, or expired API key.
+
+{
+  "error": {
+    "message": "Authentication Error, No api key passed in.",
+    "type": "auth_error",
+    "code": "401"
+  }
+}
+
+502
+
+The page could not be transcribed. Either a block exceeded max_tokens (see Truncation), or the image could not be decoded. The detail field distinguishes the two.
+Request
+cURL
+Python
+TypeScript
+
+B64=$(base64 < page.png | tr -d '\n')
+
+cat > body.json <<EOF
+{
+  "model": "indic-ocr",
+  "messages": [{"role": "user", "content": [
+    {"type": "image_url", "image_url": {"url": "data:image/png;base64,$B64"}}
+  ]}]
+}
+EOF
+
+curl -X POST https://api.bodhan.ai/v1/chat/completions \
+  -H "Authorization: Bearer $BODHAN_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d @body.json
+
+Copy
+Response
+
+{
+  "id": "indic-ocr-ce653b6bb86c45cca1a80d62780bddb4",
+  "created": 1788691870,
+  "model": "indic-ocr",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "COORDINATE GEOMETRY 7\n\n7.1 Introduction\n\nIn Class IX, you have studied that, to locate the position of a point on a plane, we require a pair of coordinate axes..."
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 849,
+    "completion_tokens": 620,
+    "total_tokens": 1469
+  },
+  "blocks": [
+    {
+      "order": 1,
+      "label": "Chapter-title",
+      "type": "Title",
+      "bbox_xyxy": [233.1, 379.8, 747.1, 477.7],
+      "conf": 0.744,
+      "text": "COORDINATE GEOMETRY 7"
+    },
+    {
+      "order": 2,
+      "label": "Section-title",
+      "type": "SectionHeader",
+      "bbox_xyxy": [159.8, 509.3, 302.1, 539.3],
+      "conf": 0.879,
+      "text": "7.1 Introduction"
+    }
+  ]
+}
+
+Copy
+

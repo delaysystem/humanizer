@@ -1,0 +1,8 @@
+# config/reporting.yaml — report rules (§1.1 row group). All [probe — D4].
+
+# Fidelity-passing N below which a §3C row is LOW-N (descriptive only, never a finding).
+# Value 15 reuses the frozen D4 analysis_minimum_n bar (origin: same rationale —
+# admits every complete cell; minimum complete N is 18, known from D1/D3
+# design, not results). Late close: D4 deferred the §3C tables to D6, so this
+# row was unneeded until now; frozen here before any D6 table computation.
+reporting_low_n_minimum: 15

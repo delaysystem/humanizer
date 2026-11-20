@@ -1,0 +1,556 @@
+{
+  "dataset_version": "v1",
+  "created_utc": "2026-10-26T20:03:46Z",
+  "config_hashes": {
+    "datasets.yaml": "5ab5b68ef26377f35da0103dfeb8bff265c97429129c04492052580d2cd7f90a"
+  },
+  "languages": [
+    "en"
+  ],
+  "id_scheme": "<H|A>-<topic>-<band>-<n>",
+  "briefs": "build/evidence/D1/generation-briefs.md",
+  "samples": [
+    {
+      "sample_id": "A-product-review-L-1",
+      "text_file": "texts/A-product-review-L-1.txt",
+      "text_sha256": "8ee6f83f9d5c67c8c763044921dccf7bf98b2109756b5a347914b17432909b4f",
+      "word_count": 299,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-L-2",
+      "text_file": "texts/A-product-review-L-2.txt",
+      "text_sha256": "8dc18027b9a16c6d0095e57509f5ce237c8eff35fb2cdbd06103666376b13ba5",
+      "word_count": 297,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-L-3",
+      "text_file": "texts/A-product-review-L-3.txt",
+      "text_sha256": "f3c819ab64558bb65afecdac1a5fe4acd68799e9205d611e20c4660fb9f5dff7",
+      "word_count": 289,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-M-1",
+      "text_file": "texts/A-product-review-M-1.txt",
+      "text_sha256": "e38b1ef1b058e5f87f616f574d9ef9e045717f8505eb2ead8222d720431ef803",
+      "word_count": 178,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-M-2",
+      "text_file": "texts/A-product-review-M-2.txt",
+      "text_sha256": "6f6bb5c582b14d03f2195bd22c0f07c7d03a037c86b844ec8b1b9711a59c77f5",
+      "word_count": 182,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-M-3",
+      "text_file": "texts/A-product-review-M-3.txt",
+      "text_sha256": "1a20a37e930922aa07e616afbc363200b3bd0e7e1709b6c21765fb916d6510f4",
+      "word_count": 182,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-S-1",
+      "text_file": "texts/A-product-review-S-1.txt",
+      "text_sha256": "08763ba143aa6c11c5967b52aa00b12540351a9e04b4c0c119b76261100359cb",
+      "word_count": 81,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-S-2",
+      "text_file": "texts/A-product-review-S-2.txt",
+      "text_sha256": "b9bbd7309a854aff8e43c2776a2b4d0e096e4f7319f774166ff4f27611bebca6",
+      "word_count": 119,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-product-review-S-3",
+      "text_file": "texts/A-product-review-S-3.txt",
+      "text_sha256": "17f0379b828db76c1dfbc1b2ee42c266cc60596e0bef95541cfdfa441c9beac2",
+      "word_count": 107,
+      "ground_truth_label": "ai",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-L-1",
+      "text_file": "texts/A-science-explainer-L-1.txt",
+      "text_sha256": "a689ee59c8513e0be48d3138719f241e46ac84f1b04d39c769a7013bf6d84ff0",
+      "word_count": 312,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-L-2",
+      "text_file": "texts/A-science-explainer-L-2.txt",
+      "text_sha256": "0174c199d37d961810236993999a72f0f9499a19ec9e94fb5f209f95c29baad6",
+      "word_count": 330,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-L-3",
+      "text_file": "texts/A-science-explainer-L-3.txt",
+      "text_sha256": "b7eac9981a6432b1ffa35b4d82f6035e91157166072c3f4355b8c9a16b768972",
+      "word_count": 315,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-M-1",
+      "text_file": "texts/A-science-explainer-M-1.txt",
+      "text_sha256": "614a658a703b09615e99d3bc189f62a3908f3ec0b54868998c87d4031bdf1ec4",
+      "word_count": 193,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-M-2",
+      "text_file": "texts/A-science-explainer-M-2.txt",
+      "text_sha256": "0bbf6695e19ce7c7a2e08ef3b212e144d63b5febf6a5fe553be60ee14941cb3e",
+      "word_count": 185,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-M-3",
+      "text_file": "texts/A-science-explainer-M-3.txt",
+      "text_sha256": "32a72a3423198f4d14d1a022ce9a183c0e9146c4de2569931a1b3cc4d7efd2fc",
+      "word_count": 179,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-S-1",
+      "text_file": "texts/A-science-explainer-S-1.txt",
+      "text_sha256": "62d6ebdb8e5e306f67ad986c3d0042270013577916517e7f949534fdcb31f9ff",
+      "word_count": 92,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-S-2",
+      "text_file": "texts/A-science-explainer-S-2.txt",
+      "text_sha256": "6626c96b377e1b904b47957f4a15326b7d65b38d9063128ed492519d7f8e94fc",
+      "word_count": 89,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-science-explainer-S-3",
+      "text_file": "texts/A-science-explainer-S-3.txt",
+      "text_sha256": "8d04290bf1611333d273669a6363976759d6d2659ee11d18ee9530f69be2b5a3",
+      "word_count": 86,
+      "ground_truth_label": "ai",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-L-1",
+      "text_file": "texts/A-tech-news-L-1.txt",
+      "text_sha256": "14aef8c5f3ff8f62341f2b78f9754b24a4707d610aeffbd5c4ad291322d75aaa",
+      "word_count": 298,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-L-2",
+      "text_file": "texts/A-tech-news-L-2.txt",
+      "text_sha256": "c8a25f13b88c20d5490e00710ba2ba91f9caa2b75845166f3d7ee6828972b5c4",
+      "word_count": 307,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-L-3",
+      "text_file": "texts/A-tech-news-L-3.txt",
+      "text_sha256": "ba268c61881daf5a1ffaff4c3dcb702d560255b889fc340a1d651a80409d3b5e",
+      "word_count": 305,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-M-1",
+      "text_file": "texts/A-tech-news-M-1.txt",
+      "text_sha256": "06d8fdf5fc98dafa3519075e878632883ef7113fb47b1685a5af63a321fd63a9",
+      "word_count": 187,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-M-2",
+      "text_file": "texts/A-tech-news-M-2.txt",
+      "text_sha256": "db4df6c487f617dcbb8f1a71efe6f9dc542209a716798e74d32c1b65c8454abd",
+      "word_count": 191,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-M-3",
+      "text_file": "texts/A-tech-news-M-3.txt",
+      "text_sha256": "0ef1814ed76424fd2fc6a832a7a9a42bc6bfaf11643ebaa6b6698f09edbbf104",
+      "word_count": 194,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-S-1",
+      "text_file": "texts/A-tech-news-S-1.txt",
+      "text_sha256": "2d77afba78da51675f1422eb3f40bb14342ab31bde22452ab2d5245647f544be",
+      "word_count": 109,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-S-2",
+      "text_file": "texts/A-tech-news-S-2.txt",
+      "text_sha256": "342f35c00252192fe466d1f2d006a0c66863b8fb6ad9f110da50ea6a2bbab484",
+      "word_count": 100,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "A-tech-news-S-3",
+      "text_file": "texts/A-tech-news-S-3.txt",
+      "text_sha256": "346e17b54c0faf46246f2a5f589181948bee208310de40ecc09c997a23b91a89",
+      "word_count": 99,
+      "ground_truth_label": "ai",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "generated-ai-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-L-1",
+      "text_file": "texts/H-product-review-L-1.txt",
+      "text_sha256": "a2bb679af2c92dc7a89f09a71211586e04082ca18cf184bd66333acf900ca948",
+      "word_count": 340,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-L-2",
+      "text_file": "texts/H-product-review-L-2.txt",
+      "text_sha256": "b219a9c2b9b22dc4e480bf44291434bb4d7181f9dc7bd83e9114503afa855f24",
+      "word_count": 333,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-L-3",
+      "text_file": "texts/H-product-review-L-3.txt",
+      "text_sha256": "913abade179a34e187f885b0ad3b1cc5847d090946785944fe5d3a2bbc69075d",
+      "word_count": 320,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-M-1",
+      "text_file": "texts/H-product-review-M-1.txt",
+      "text_sha256": "f9009472205f8060ead5065c244ade8e304f769f28846c185f78e9760dd8e924",
+      "word_count": 166,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-M-2",
+      "text_file": "texts/H-product-review-M-2.txt",
+      "text_sha256": "b3f28d7de73e139dce89f10ba188fcd4c28e06374f3d3cb6bf3be70cfcdc2ab6",
+      "word_count": 225,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-M-3",
+      "text_file": "texts/H-product-review-M-3.txt",
+      "text_sha256": "2b4cf1f02890141635675d632bb8151b37373da4b56a90fce4b2a1282e987055",
+      "word_count": 240,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-S-1",
+      "text_file": "texts/H-product-review-S-1.txt",
+      "text_sha256": "4416507e977e0718d421bcad75e2f4b158c2ce2f604513e848ab621e0f8a5a70",
+      "word_count": 92,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-S-2",
+      "text_file": "texts/H-product-review-S-2.txt",
+      "text_sha256": "3ea521cff6376f75586114a3dcda28d38414f6fae66459fcfd02de387a5efee7",
+      "word_count": 80,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-product-review-S-3",
+      "text_file": "texts/H-product-review-S-3.txt",
+      "text_sha256": "e61d6ee013e63f41ffc85d63df79ebfad1181fdb0d9051e0da18b89bb7528511",
+      "word_count": 90,
+      "ground_truth_label": "human",
+      "topic": "product-review",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-L-1",
+      "text_file": "texts/H-science-explainer-L-1.txt",
+      "text_sha256": "42d576abea24a817badbcd7b7216b22cf325d89b4dbf82ace0fe295dbb7fc07d",
+      "word_count": 301,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-L-2",
+      "text_file": "texts/H-science-explainer-L-2.txt",
+      "text_sha256": "ba6295a39715b784bd15b2d92646432315faa86bcb5424bd8c52590e696298bc",
+      "word_count": 260,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-L-3",
+      "text_file": "texts/H-science-explainer-L-3.txt",
+      "text_sha256": "43e3203fb6f13962ecbff290cc7451ec85cc1cd058b74e30a2072dfda0cd0afb",
+      "word_count": 356,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-M-1",
+      "text_file": "texts/H-science-explainer-M-1.txt",
+      "text_sha256": "bf83bb0fbd33ee47d23fde55d1c9d48a9a22845e1002daffaaf7362703dfa0d9",
+      "word_count": 176,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-M-2",
+      "text_file": "texts/H-science-explainer-M-2.txt",
+      "text_sha256": "ddd627525e9b5098fa0f2df0e5cf8c1c4f188c8152d1eff4a2530bed6fe456ae",
+      "word_count": 167,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-M-3",
+      "text_file": "texts/H-science-explainer-M-3.txt",
+      "text_sha256": "53037d0038003dbcbb07c0927f7b8c3ab8de2c8a5215cc86a940f1ff08371599",
+      "word_count": 160,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-S-1",
+      "text_file": "texts/H-science-explainer-S-1.txt",
+      "text_sha256": "5c01506bbc13329ec20d9c3225e38220e269a42fba42249d8112439dce30062f",
+      "word_count": 104,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-S-2",
+      "text_file": "texts/H-science-explainer-S-2.txt",
+      "text_sha256": "12e6e83e781bdf7b957e55558fd65d09e219c8b613230dae4a2299b23d39934d",
+      "word_count": 116,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-science-explainer-S-3",
+      "text_file": "texts/H-science-explainer-S-3.txt",
+      "text_sha256": "540d7c925c23df1c1fb3bfa0d32fa9e552ccbb65c0ae75e0920d5b137126b77c",
+      "word_count": 104,
+      "ground_truth_label": "human",
+      "topic": "science-explainer",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-L-1",
+      "text_file": "texts/H-tech-news-L-1.txt",
+      "text_sha256": "93c3bb86b329bebc41c4b44951377150133fe02e1cf66c86b1c77fe49fd86e8b",
+      "word_count": 360,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-L-2",
+      "text_file": "texts/H-tech-news-L-2.txt",
+      "text_sha256": "f3acc40f5083b597b4ea9637aca66ef5cd2bfaee4620b4d7cf4fe24fd2b677a7",
+      "word_count": 348,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-L-3",
+      "text_file": "texts/H-tech-news-L-3.txt",
+      "text_sha256": "f1124ee2b45f1df45010bfeb13955f4394a8d18d579d1a5bdcf509aeb48d12c5",
+      "word_count": 344,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "L",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-M-1",
+      "text_file": "texts/H-tech-news-M-1.txt",
+      "text_sha256": "b7397d44bb0f7b4f03bf8a1be8058a69a278a8655f4bb74d674aa53d58b340ab",
+      "word_count": 183,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-M-2",
+      "text_file": "texts/H-tech-news-M-2.txt",
+      "text_sha256": "e54e839d4811fd632ce44036dfd052a9d9f51f90303aaa45f344fa37366eac40",
+      "word_count": 165,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-M-3",
+      "text_file": "texts/H-tech-news-M-3.txt",
+      "text_sha256": "568d892513324e4bbf1549fa308595955d5cf33547f328eed5d8355a7e684f70",
+      "word_count": 159,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "M",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-S-1",
+      "text_file": "texts/H-tech-news-S-1.txt",
+      "text_sha256": "02a5bef358e115f77905ed9d8597066d58ee315c1c29b25ce2993e36f60461a7",
+      "word_count": 114,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-S-2",
+      "text_file": "texts/H-tech-news-S-2.txt",
+      "text_sha256": "d6ae6527492cb5ba16c822e00124a6cd62e96f745b1195f69b13962d50a7bcb8",
+      "word_count": 108,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    },
+    {
+      "sample_id": "H-tech-news-S-3",
+      "text_file": "texts/H-tech-news-S-3.txt",
+      "text_sha256": "cfd96f94376b7cc15a314608d63017801d4008bbbe7fc3d6e6a719c67a5dd9c6",
+      "word_count": 103,
+      "ground_truth_label": "human",
+      "topic": "tech-news",
+      "length_band": "S",
+      "provenance": "authored-human-style-for-evaluation"
+    }
+  ],
+  "variant_slots": [],
+  "variant_slot_schema": "D3 fills: {slot_id, source_sample_id, condition_id, pipeline_id, config_hash}; v1 ships empty per D1 scope"
+}

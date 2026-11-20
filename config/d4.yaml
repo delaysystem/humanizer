@@ -1,0 +1,7 @@
+# config/d4.yaml — D4 analysis inputs (D4 pre-freeze addendum, still
+# pre-analysis: the analyzer has not run on any cell).
+#
+# Frozen D3A implementer run whose flip tables + failure registry are D4's
+# inputs (origin: D3A verdict P6 triple; byte-identical to the verifier
+# run's tables, verified by cmp before freezing — see D4 verdict).
+d4_d3a_tables_run_id: 20261027-014625-d3a-606423

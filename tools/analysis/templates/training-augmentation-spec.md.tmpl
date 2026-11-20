@@ -1,0 +1,11 @@
+# Training augmentation spec {{FIX_ID}} (ALTERNATIVE, spec only)
+
+- Source: {{STORE}} variant store for {{CONDITION}} (labeled AI variants + fidelity verdicts).
+- Selection: the {{FLIPS}} failing variant IDs below; fidelity-passing only.
+- Labels: ground-truth AI (inherited, verified by preservation checks).
+- Volume: exactly the failing set (no padding, no convenience sampling).
+- Quarantine: the data-spec quarantine split is held out from augmentation
+  training data; verification on training data is leakage.
+
+Failing variant IDs:
+{{FAILING_VARIANTS}}

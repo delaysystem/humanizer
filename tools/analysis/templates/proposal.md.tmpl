@@ -1,0 +1,21 @@
+# Proposal {{FIX_ID}} ({{CONDITION}} / {{DETECTOR_NAME}})
+
+Failure mode: {{DETECTOR_NAME}} flips AI->human (original slop verdict,
+variant clean verdict, fidelity-passing only) on {{FLIPS}} of {{N}} variants
+(rate {{RATE4}}, 95% Wilson CI [{{CI_LO}}, {{CI_HI}}], severity {{SEVERITY}}).
+Condition baselines detect at {{DET_BASE}} vs {{DET_VAR}} on variants
+(delta {{DELTA}}). Evidence: {{TABLES_PATH}}, {{IDS_PATH}}.
+
+Proposed change (spec form; Docker deployment untouched):
+1. Threshold-type (primary, computed): select an operating threshold from the
+   tradeoff curve in threshold-simulation.md (assumed rule: logged score is
+   treated as P(AI-like); detected iff score >= T). No single T is
+   pre-selected; the apply phase chooses from the curve.
+2. Retraining-type (alternative, spec only): augment detector training data
+   with the {{FLIPS}} failing variants (see training-augmentation-spec.md +
+   data-spec.md).
+3. Consistency-type (spec only): {{CONSISTENCY_SPEC}}
+
+What stays unknown until the apply phase: post-change detection rates,
+calibration shift, interaction with other entries, human-control regression.
+No claim in this entry asserts a detector is repaired.

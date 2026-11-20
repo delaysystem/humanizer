@@ -1,0 +1,8 @@
+[
+  {
+    "sample_id": "A-science-explainer-S-3",
+    "pipeline": "d3a-i3",
+    "status": "EXTERNAL-BLOCKED",
+    "reason": "transport exhausted: HTTP 429: b'{\"error\":{\"message\":\"Maximum rate limit reached for the model\",\"type\":\"throttling_error\",\"param\":null,\"code\":\"429\"}}'"
+  }
+]

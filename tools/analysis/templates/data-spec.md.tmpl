@@ -1,0 +1,12 @@
+# Data spec {{FIX_ID}} (retraining alternative)
+
+- Dataset: the {{FLIPS}} failing variant IDs in training-augmentation-spec.md
+  plus the {{ORIGINALS_N}} human controls from {{ORIGINALS_STORE}}/records.
+- Labels: variant IDs inherit ground-truth AI; controls are ground-truth human.
+- Format: text files + manifest (variant_id, text_ref, label, source run).
+- Quarantine: all d3a-i10 variants (hardest intensity) and the verifier-run
+  score reports are held out from training; evaluate only, never train.
+  Quarantine membership is by variant-ID prefix (V-d3a-i10-*) and report
+  run-id (the D3A verifier run); violations invalidate the training run.
+- License/provenance: D1 dataset lineage (AI originals generated per D1
+  manifest; human controls per D1 sources).

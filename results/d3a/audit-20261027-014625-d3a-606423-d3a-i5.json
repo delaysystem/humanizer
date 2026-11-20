@@ -1,0 +1,49 @@
+{
+  "run_id": "20261027-014625-d3a-606423",
+  "written_utc": "2026-10-27T01:47:25Z",
+  "artifact": "results/d3a/audit-20261027-014625-d3a-606423-d3a-i5.json",
+  "payload": {
+    "pipeline": "d3a-i5",
+    "config_hashes": {
+      "analysis.yaml": "71413298a98636105f3753a8705b687a5cee0af4ca4cc126b13ab2a6f70c08e2",
+      "api.yaml": "65c192cbf6b9cd5a645b15619abc4fbe6051b509fe110ee94c74ba067711c984",
+      "bodhan.yaml": "387ba8a2d519d9cda938cb483258d22050a9b20e831c09d5a746e69e291777da",
+      "ci.yaml": "f725b930dd5b334257cb9dc9638993c64df97ae2dc31b73b4145a9b07eb1099a",
+      "dataset-manifest-schema.json": "4350675a1fe4346b2f01f6586b23fbcb28d2be139453470937fbba2bbc83454b",
+      "datasets.yaml": "5ab5b68ef26377f35da0103dfeb8bff265c97429129c04492052580d2cd7f90a",
+      "fidelity.yaml": "b77a7f810baf4dc7bb561f912e28b53dc2ffa4ed35fb241974f69c555640f3da",
+      "manifest-schema.json": "e191be418f7bb7245dc8ebafed3176ffec528e0110c760fb83f0817df722e89a",
+      "pipelines.yaml": "274c53fe3b0a9878fab74b6ec3bf527cbd502916d8348044ad1b93fd7a2d6908",
+      "reporting.yaml": "f40849cdada5a7cefe08b617364ecb49aa9767981f2d3bc65a7f6eafc2fc5dfd",
+      "results-schema.json": "ca688ac5e6cee237b3eee26d6396e7f36bc3e524d8324f79190a575b9d3ac15f",
+      "tolerances.yaml": "d754374c47af49aa836e99f1002e55f0428cd752bf35dfaebb40ec31d7c98ebd",
+      "workers.yaml": "62d9207b9b5cedbab47bb2770b96cbe2c4a0800cb7721107f1269e2215b71e9c",
+      "steps/bodhan-en-kn-v1.yaml": "ebc5a693d88fa32b052ae39df43292df45373b1911b51702f7af9a7bf1239257",
+      "steps/bodhan-invalid-v1.yaml": "45e250c41f8187a91668b2bf855682015070e155896f92d1768ca4771bf8ca2e",
+      "steps/bodhan-kn-en-v1.yaml": "39126d0729d55316419aed8f19ee2a7b859cb99c2699046d66049bbffc3c2446",
+      "steps/truncate-v1.yaml": "fdf70ede399e2dc74aa8f189569081841d70ff1785c20b6d2b99a6952fd1d50e",
+      "steps/truncate-v2.yaml": "02061f7cb5d156d72cec5b84b35abccc0c044cf94c54c88c40183ab1c6ee45c7"
+    },
+    "steps": [
+      "bodhan-en-kn@v1",
+      "bodhan-kn-en@v1",
+      "bodhan-en-kn@v1",
+      "bodhan-kn-en@v1",
+      "bodhan-en-kn@v1",
+      "bodhan-kn-en@v1",
+      "bodhan-en-kn@v1",
+      "bodhan-kn-en@v1",
+      "bodhan-en-kn@v1",
+      "bodhan-kn-en@v1"
+    ],
+    "input_manifest_sha256": "3ffcf1dffe8fb01351ec884b118dd8875768d483b013da86390fb8861995ecd6",
+    "sample_count": 27,
+    "counts": {
+      "scored": 27,
+      "blocked": 0,
+      "degraded": 0,
+      "reused": 27
+    },
+    "bodhan_calls": 0
+  }
+}

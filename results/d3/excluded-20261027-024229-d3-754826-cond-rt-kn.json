@@ -1,0 +1,4 @@
+{
+  "pipeline": "cond-rt-kn",
+  "degraded_variant_ids": []
+}

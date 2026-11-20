@@ -1,0 +1,59 @@
+{
+  "variant_id": "V-d3a-combo-rt-trunc-A-science-explainer-S-3",
+  "pipeline": "d3a-combo-rt-trunc",
+  "steps": [
+    "bodhan-en-kn@v1",
+    "bodhan-kn-en@v1",
+    "truncate@v1"
+  ],
+  "config_hashes": {
+    "analysis.yaml": "654fe140d0690d338d8e8ab726ae93d7f3624d484562e337dd5ffcdad5c50d84",
+    "api.yaml": "65c192cbf6b9cd5a645b15619abc4fbe6051b509fe110ee94c74ba067711c984",
+    "bodhan.yaml": "387ba8a2d519d9cda938cb483258d22050a9b20e831c09d5a746e69e291777da",
+    "ci.yaml": "f725b930dd5b334257cb9dc9638993c64df97ae2dc31b73b4145a9b07eb1099a",
+    "d4.yaml": "03ab3794140c0ea66abe118d2f73a223169bb04c80df1a9c5c73fb669d5f3d13",
+    "d5.yaml": "db2dd23b05676e264cac30b3dfbbabf37e586c6307cfa652ef29d73356989d82",
+    "dataset-manifest-schema.json": "4350675a1fe4346b2f01f6586b23fbcb28d2be139453470937fbba2bbc83454b",
+    "datasets.yaml": "5ab5b68ef26377f35da0103dfeb8bff265c97429129c04492052580d2cd7f90a",
+    "fidelity.yaml": "b77a7f810baf4dc7bb561f912e28b53dc2ffa4ed35fb241974f69c555640f3da",
+    "manifest-schema.json": "e191be418f7bb7245dc8ebafed3176ffec528e0110c760fb83f0817df722e89a",
+    "pipelines.yaml": "274c53fe3b0a9878fab74b6ec3bf527cbd502916d8348044ad1b93fd7a2d6908",
+    "reporting.yaml": "f40849cdada5a7cefe08b617364ecb49aa9767981f2d3bc65a7f6eafc2fc5dfd",
+    "results-schema.json": "ca688ac5e6cee237b3eee26d6396e7f36bc3e524d8324f79190a575b9d3ac15f",
+    "tolerances.yaml": "2798e6a8ff5b0f986ec54be295176e837d2f5611a5be2c1a6abe2e321f36954a",
+    "workers.yaml": "62d9207b9b5cedbab47bb2770b96cbe2c4a0800cb7721107f1269e2215b71e9c",
+    "steps/bodhan-en-kn-v1.yaml": "ebc5a693d88fa32b052ae39df43292df45373b1911b51702f7af9a7bf1239257",
+    "steps/bodhan-invalid-v1.yaml": "45e250c41f8187a91668b2bf855682015070e155896f92d1768ca4771bf8ca2e",
+    "steps/bodhan-kn-en-v1.yaml": "39126d0729d55316419aed8f19ee2a7b859cb99c2699046d66049bbffc3c2446",
+    "steps/truncate-v1.yaml": "fdf70ede399e2dc74aa8f189569081841d70ff1785c20b6d2b99a6952fd1d50e",
+    "steps/truncate-v2.yaml": "02061f7cb5d156d72cec5b84b35abccc0c044cf94c54c88c40183ab1c6ee45c7"
+  },
+  "variant_sha256": "bfe09b5229e97644f6f82e3270cd90a07762c63081f5756982af74c842b54639",
+  "chain": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "truncate",
+      "version": "v1",
+      "params": {
+        "target_words": 115,
+        "in_words": 85,
+        "out_words": 85
+      }
+    }
+  ]
+}

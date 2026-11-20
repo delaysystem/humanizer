@@ -1,0 +1,146 @@
+{
+  "sample_id": "H-product-review-M-1",
+  "original_id": "H-product-review-M-1",
+  "ground_truth_label": "human",
+  "condition_id": "none-baseline",
+  "transform_params": {},
+  "provenance": [
+    "d2-baseline-scoring"
+  ],
+  "variant_text_ref": "texts/H-product-review-M-1.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "AI probability: 1.7% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.082,
+      "verdict": "clean",
+      "details": "AI probability: 8.2% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "CE ratio: 1.138 (observer/performer), PP performer: 67.4, PP observer: 120.4"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.080 (higher = more AI-like, n=216 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Perplexity: 67.4 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 67.4 (score 0.00), DistilGPT-2 PP: 120.4 (score 0.00), agreement: 1.00"
+    },
+    "Fakespot": {
+      "score": 0.006,
+      "verdict": "clean",
+      "details": "AI probability: 0.6% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.257,
+      "verdict": "clean",
+      "details": "AI probability: 25.7% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.084,
+      "verdict": "clean",
+      "details": "AI probability: 8.4% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "AI probability: 0.1% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.024,
+      "verdict": "clean",
+      "details": "AI probability: 2.4% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.005,
+      "verdict": "clean",
+      "details": "AI probability: 0.5% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Top-1: 28%, Top-5: 51%, Top-10: 59%, Top-100: 79% of 216 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.43 (lower = more AI-like, n=216 tokens)"
+    },
+    "DivEye": {
+      "score": 0.051,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.774, skew: 0.69, kurtosis: -0.37 (mean=4.2, std=3.3, n=216)"
+    },
+    "Burstiness": {
+      "score": 0.603,
+      "verdict": "suspicious",
+      "details": "Sentence perplexity CV: 0.408 (mean=78.3, stdev=32.0, n=9 sentences). Flat rhythm \u2014 AI-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.017,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.47 (mean 18 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.04,
+      "verdict": "clean",
+      "details": "Root TTR: 9.13 (unique/\u221atotal), Hapax ratio: 0.83 (99/119 words), Yule's K: 96.2"
+    },
+    "Formulaic Patterns": {
+      "score": 0.001,
+      "verdict": "clean",
+      "details": "Found 1 formulaic patterns: starter repetition: 56% (\"it\"x3, \"the\"x2)"
+    },
+    "Readability Uniformity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=74.9, stdev=9.5, CV=0.126 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No excessive hedging or sentiment patterns detected."
+    }
+  },
+  "fidelity": {
+    "cosine_vs_original": 1.0,
+    "method": "identity-original-untransformed",
+    "fidelity_passing": true
+  },
+  "store_record_id": "d3aorig-H-product-review-M-1",
+  "raw_report_id": "befa74289771",
+  "overall_verbatim": {
+    "overall_score": 8.5,
+    "overall_verdict": "Clean \u2014 likely human-written",
+    "engines_flagged": 1,
+    "engines_total": 23
+  },
+  "apply_source": {
+    "entry": "FIX-D3A-002",
+    "condition": "d3a-i3",
+    "endpoint": "http://localhost:8768"
+  }
+}

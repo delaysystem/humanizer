@@ -1,0 +1,7 @@
+{
+  "$comment": "config/dataset-manifest-schema.json — required fields of a dataset manifest (D1-named schema source for E2E-1).",
+  "required_top_fields": ["dataset_version", "created_utc", "config_hashes", "languages", "samples", "variant_slots"],
+  "required_sample_fields": ["sample_id", "text_file", "text_sha256", "word_count", "ground_truth_label", "topic", "length_band", "provenance"],
+  "label_values": ["human", "ai"],
+  "provenance_values": ["authored-human-style-for-evaluation", "generated-ai-for-evaluation"]
+}

@@ -1,0 +1,328 @@
+{
+  "sample_id": "V-d3a-i5-A-tech-news-M-3",
+  "original_id": "A-tech-news-M-3",
+  "ground_truth_label": "ai",
+  "condition_id": "d3a-i5",
+  "transform_params": {
+    "pipeline": "d3a-i5",
+    "steps": [
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-en-kn",
+        "version": "v1",
+        "params": {
+          "target_language_code": "kn",
+          "target_script": "native"
+        }
+      },
+      {
+        "step": "bodhan-kn-en",
+        "version": "v1",
+        "params": {
+          "target_language_code": "en",
+          "target_script": "native"
+        }
+      }
+    ]
+  },
+  "provenance": [
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-en-kn",
+      "version": "v1",
+      "params": {
+        "target_language_code": "kn",
+        "target_script": "native"
+      }
+    },
+    {
+      "step": "bodhan-kn-en",
+      "version": "v1",
+      "params": {
+        "target_language_code": "en",
+        "target_script": "native"
+      }
+    }
+  ],
+  "variant_text_ref": "variants/V-d3a-i5-A-tech-news-M-3.txt",
+  "per_detector_scores": {
+    "TMR Detector": {
+      "score": 0.019,
+      "verdict": "clean",
+      "details": "AI probability: 1.9% (TMR RoBERTa, RAID benchmark)"
+    },
+    "ReMoDetect": {
+      "score": 0.988,
+      "verdict": "slop",
+      "details": "AI probability: 98.8% (RLHF reward-model detector)"
+    },
+    "Binoculars": {
+      "score": 0.063,
+      "verdict": "clean",
+      "details": "CE ratio: 1.181 (observer/performer), PP performer: 36.9, PP observer: 71.1"
+    },
+    "Fast-DetectGPT": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Mean curvature: -0.052 (higher = more AI-like, n=208 tokens)"
+    },
+    "Perplexity": {
+      "score": 0.344,
+      "verdict": "clean",
+      "details": "Perplexity: 36.9 (lower = more likely AI-generated)"
+    },
+    "Cross-Perplexity": {
+      "score": 0.154,
+      "verdict": "clean",
+      "details": "GPT-2 Medium PP: 36.9 (score 0.34), DistilGPT-2 PP: 71.1 (score 0.00), agreement: 0.66"
+    },
+    "Fakespot": {
+      "score": 1.0,
+      "verdict": "slop",
+      "details": "AI probability: 100.0% (Fakespot APOLLO RoBERTa)"
+    },
+    "E5-Small": {
+      "score": 0.728,
+      "verdict": "slop",
+      "details": "AI probability: 72.8% (E5-small LoRA, RAID #2)"
+    },
+    "BERT-tiny RAID": {
+      "score": 0.919,
+      "verdict": "slop",
+      "details": "AI probability: 91.9% (BERT-tiny, RAID dataset)"
+    },
+    "OpenAI Detector": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "AI probability: 0.0% (RoBERTa OpenAI detector)"
+    },
+    "ChatGPT Detector": {
+      "score": 0.953,
+      "verdict": "slop",
+      "details": "AI probability: 95.3% (ChatGPT detector, label='ChatGPT')"
+    },
+    "Desklib DeBERTa": {
+      "score": 0.998,
+      "verdict": "slop",
+      "details": "AI probability: 99.8% (DeBERTa-v3-large, RAID benchmark leader)"
+    },
+    "SuperAnnotate": {
+      "score": 0.997,
+      "verdict": "slop",
+      "details": "AI probability: 99.7% (SuperAnnotate RoBERTa-large, low FPR)"
+    },
+    "GLTR": {
+      "score": 0.111,
+      "verdict": "clean",
+      "details": "Top-1: 32%, Top-5: 56%, Top-10: 64%, Top-100: 86% of 208 tokens"
+    },
+    "Log-Rank": {
+      "score": 0.198,
+      "verdict": "clean",
+      "details": "Mean log-rank: 2.00 (lower = more AI-like, n=208 tokens)"
+    },
+    "DivEye": {
+      "score": 0.048,
+      "verdict": "clean",
+      "details": "Surprisal CV: 0.818, skew: 0.74, kurtosis: -0.34 (mean=3.6, std=3.0, n=208)"
+    },
+    "Burstiness": {
+      "score": 0.04,
+      "verdict": "clean",
+      "details": "Sentence perplexity CV: 0.774 (mean=48.7, stdev=37.7, n=11 sentences). Natural variation \u2014 human-like"
+    },
+    "Linguistic Markers": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No significant AI linguistic markers detected."
+    },
+    "Structural Analysis": {
+      "score": 0.05,
+      "verdict": "clean",
+      "details": "Sentence length CV: 0.23 (mean 17 words)"
+    },
+    "Vocabulary Richness": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Root TTR: 10.38 (unique/\u221atotal), Hapax ratio: 0.84 (119/142 words), Yule's K: 57.2"
+    },
+    "Formulaic Patterns": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "No formulaic AI patterns detected."
+    },
+    "Readability Uniformity": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "Flesch Reading Ease: mean=28.0, stdev=8.9, CV=0.320 across 4 paragraphs"
+    },
+    "Sentiment & Hedging": {
+      "score": 0.0,
+      "verdict": "clean",
+      "details": "1 filler qualifiers (5.4/1k words)"
+    }
+  },
+  "fidelity": {
+    "cosine": 0.9545,
+    "threshold": 0.8,
+    "metric": "doc-embedding-cosine",
+    "model": "sentence-transformers-6.2.0/all-MiniLM-L6-v2",
+    "automated_pass": true,
+    "layer2": {
+      "numbers_original": 0,
+      "numbers_recall": 1.0,
+      "dropped_numbers": [],
+      "entities_original": 8,
+      "entities_recall": 0.5,
+      "readability": {
+        "method": "flesch-reading-ease-stdlib",
+        "original": 23.55,
+        "variant": 24.57
+      },
+      "review_flag": false
+    },
+    "spotcheck": "unsampled",
+    "fidelity_passing": true,
+    "gate_version": "3layer-v1+readability+langrule",
+    "language": {
+      "intended_final": "en",
+      "kannada_fraction": 0.0,
+      "limit": 0.05,
+      "mismatch": false
+    }
+  },
+  "store_record_id": "d3a-V-d3a-i5-A-tech-news-M-3",
+  "raw_report_id": "5016b59117b7",
+  "overall_verbatim": {
+    "overall_score": 74.6,
+    "overall_verdict": "Likely AI-generated",
+    "engines_flagged": 7,
+    "engines_total": 23
+  }
+}
